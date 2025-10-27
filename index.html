@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlife Police Department</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Vlife Police Department</h1>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="reglement-tab" data-bs-toggle="tab" data-bs-target="#reglement" type="button" role="tab" aria-controls="reglement" aria-selected="true">Règlement RPD</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="hierarchie-tab" data-bs-toggle="tab" data-bs-target="#hierarchie" type="button" role="tab" aria-controls="hierarchie" aria-selected="false">Structure hiérarchique</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="uniformes-tab" data-bs-toggle="tab" data-bs-target="#uniformes" type="button" role="tab" aria-controls="uniformes" aria-selected="false">Uniformes</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="radio-tab" data-bs-toggle="tab" data-bs-target="#radio" type="button" role="tab" aria-controls="radio" aria-selected="false">Code Radio</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="procedures-tab" data-bs-toggle="tab" data-bs-target="#procedures" type="button" role="tab" aria-controls="procedures" aria-selected="false">Procédures judiciaires et arrestations</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="miranda-tab" data-bs-toggle="tab" data-bs-target="#miranda" type="button" role="tab" aria-controls="miranda" aria-selected="false">Droit Miranda</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent"> 
+            <div class="tab-pane fade show active" id="reglement" role="tabpanel" aria-labelledby="reglement-tab">
+                <h2 class="mt-3">Règlement RPD</h2>
+                <h4>I. Mission et valeurs du RPD</h4>
+                <p>Le Rockford Police Department a pour mission de protéger la population, maintenir la paix, faire respecter la loi et assurer la sécurité de tous les citoyens.</p>
+                <p>Chaque officier incarne les valeurs fondamentales suivantes :</p>
+                <ul>
+                    <li><strong>Intégrité :</strong> être honnête et impartial en toute situation.</li>
+                    <li><strong>Courage :</strong> agir avec fermeté malgré le danger.</li>
+                    <li><strong>Respect :</strong> traiter chaque citoyen et collègue avec dignité.</li>
+                    <li><strong>Discipline :</strong> représenter la loi de façon exemplaire.</li>
+                </ul>
+                <p>Le serment du RPD engage chaque agent à servir et protéger sans discrimination ni abus.</p>
+
+                <h4>II. Devoirs et conduite des agents</h4>
+                <ul>
+                    <li>Un officier doit rester calme, poli et professionnel en toute circonstance.</li>
+                    <li>La neutralité absolue est requise : aucune préférence politique, clanique ou sociale.</li>
+                    <li>L’usage de la force doit toujours être proportionné et justifié.</li>
+                    <li>Les ordres des supérieurs doivent être exécutés, sauf s’ils sont manifestement illégaux.</li>
+                    <li>Tout manquement à la discipline, mensonge ou dissimulation de faute pourra entraîner une enquête interne.</li>
+                    <li>Les relations entre collègues doivent rester respectueuses et hiérarchiques.</li>
+                    <li>Le non-respect de la hiérarchie constitue une faute grave.</li>
+                    <li>La radio interne doit rester claire, concise et exempte de bavardages inutiles.</li>
+                </ul>
+
+                <h4>III. Armement et matériel</h4>
+                <ul>
+                    <li>L’arme ne doit jamais être dégainée sans raison valable.</li>
+                    <li>Chaque agent doit avoir le matériel nécessaire à l'exécution de ses tâches.</li>
+                </ul>
+
+                <h4>IV. Patrouilles et interventions</h4>
+                <ul>
+                    <li>Les patrouilles sont effectuées en binôme minimum sauf exception validée par un supérieur.</li>
+                    <li>Avant chaque début de service, l’agent doit annoncer sa mise en service radio.</li>
+                    <li>La conduite doit être prudente et les agents doivent respecter le code de la route, les gyrophares ne s’allument qu’en urgence.</li>
+                    <li>Les agents doivent couvrir l’ensemble du territoire de Rockford.</li>
+                    <li>En intervention, le gradé sur place prend la direction des opérations.</li>
+                    <li>Les civils doivent toujours être traités avec respect, calme et autorité maîtrisée.</li>
+                    <li>L’usage des armes à feu ne peut se faire qu’après avertissement clair et en dernier recours.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="uniformes" role="tabpanel" aria-labelledby="uniformes-tab">
+                <h2 class="mt-3">Uniformes</h2>
+                <p>Vous pouvez consulter les tenues réglementaires par rang en cliquant sur le lien ci-dessous :</p>
+                <a href="https://docs.google.com/document/d/1tH1BoSTruCAPfL25sU4gBFp3g-SkR2Zhx9ZEpLl694g/edit?tab=t.0" class="btn btn-primary" target="_blank">Voir les tenues réglementaires</a>
+            </div>
+            <div class="tab-pane fade" id="radio" role="tabpanel" aria-labelledby="radio-tab">
+                <h2 class="mt-3">Code Radio</h2>
+                <img src="coderadio.png" class="img-fluid" alt="Codes radio de la police">
+                <h4 class="mt-4">Exemples d'utilisation</h4>
+                <p><strong>Prise / fin de service:</strong><br>
+                <strong>10-8 :</strong> “Dispatch, 10-8 pour l’officier I Honorable, prise de service, terminé.”<br>
+                <strong>10-7 :</strong> “Dispatch, 10-7, fin de service pour l’officier I Honorable, retour au poste, terminé.”</p>
+                <p><strong>Début / fin de patrouille:</strong><br>
+                <strong>10-41 :</strong> “Adam-01(Nom de votre patrouille affecter) pour Dispatch, 10-41, début de patrouille avec Deputy-Chief Auger et Officier I Honorable”.<br>
+                <strong>10-42 :</strong> “Adam-01 pour Dispatch, 10-42, fin de patrouille.”</p>
+            </div>
+            <div class="tab-pane fade" id="miranda" role="tabpanel" aria-labelledby="miranda-tab">
+                <h2 class="mt-3">Droit Miranda</h2>
+                <p class="lead">« Vous êtes actuellement placé en état d’arrestation.<br>
+                    Vous avez le droit de garder le silence.<br>
+                    Tout ce que vous direz pourra être retenu contre vous devant un tribunal.<br>
+                    Vous avez le droit à un avocat.<br>
+                    Si vous n’en avez pas les moyens, un avocat vous sera commis d’office.<br>
+                    Vous avez le droit à une assistance médicale en cas de blessure.<br>
+                    Avez-vous compris vos droits ? »</p>
+            </div>
+            <div class="tab-pane fade" id="hierarchie" role="tabpanel" aria-labelledby="hierarchie-tab"> 
+                <h2 class="mt-3">Structure hiérarchique</h2>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-textual-tab" data-bs-toggle="pill" data-bs-target="#pills-textual" type="button" role="tab" aria-controls="pills-textual" aria-selected="true">Présentation textuelle</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-pyramid-tab" data-bs-toggle="pill" data-bs-target="#pills-pyramid" type="button" role="tab" aria-controls="pills-pyramid" aria-selected="false">Présentation en pyramide</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-textual" role="tabpanel" aria-labelledby="pills-textual-tab">
+                        <h4>Direction</h4>
+                        <p>Dirige et supervise l’ensemble du département.
+                        Gère la politique globale du RPD et valide les grandes décisions.
+                        Peut déléguer certains pouvoirs à l’État-Major.</p>
+                        <h4>État-Major</h4>
+                        <p>Composé du Chief, du Deputy-Chief et du Commandant.
+                        Supervise toutes les unités et approuve les opérations sensibles.
+                        Statue sur les nominations, promotions et sanctions majeures.
+                        Doit des comptes à la direction.</p>
+                        <h4>Haut Corps de Commandement</h4>
+                        <p>Réunit les Capitaines, Lieutenants et Majors.
+                        Gère les unités, forme les nouveaux officiers et veille au bon déroulement des services.
+                        Autorise ou interdit les interventions à risque selon la situation.</p>
+                        <h4>Corps de Commandement</h4>
+                        <p>Inclut les Sergents I, II, Chef et les sous-officiers d’encadrement.
+                        Encadre directement les agents sur le terrain.
+                        Assure la cohésion, la discipline et le respect des procédures.</p>
+                        <h4>Corps des Officiers</h4>
+                        <p>Officiers, agents et recrues.
+                        Représentent la majorité opérationnelle du département.
+                        Effectuent les patrouilles, interventions et contrôles quotidiens, essentiels au RPD.</p>
+                    </div>
+                    <div class="tab-pane fade" id="pills-pyramid" role="tabpanel" aria-labelledby="pills-pyramid-tab">
+                        <div class="pyramid-container mt-4">
+                            <div class="pyramid-level bg-danger text-white">Direction</div>
+                            <div class="pyramid-level bg-warning text-dark">État-Major</div>
+                            <div class="pyramid-level bg-info text-dark">Haut Corps de Commandement</div>
+                            <div class="pyramid-level bg-primary text-white">Corps de Commandement</div>
+                            <div class="pyramid-level bg-success text-white">Corps des Officiers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="procedures" role="tabpanel" aria-labelledby="procedures-tab">
+                <h2 class="mt-3">Procédures judiciaires et arrestations</h2>
+                <h4>Interpellation</h4>
+                <p>Une personne peut être interpellée si :</p>
+                <ul>
+                    <li>elle est surprise en flagrant délit ;</li>
+                    <li>un témoin fiable la désigne comme suspecte ;</li>
+                    <li>un mandat ou ordre supérieur le justifie.</li>
+                </ul>
+                <p>L’individu est ensuite menotté et sécurisé. Toute résistance doit être maîtrisée sans excès.</p>
+
+                <h4>Lecture des droits Miranda</h4>
+                <p>Une fois l’arrestation effectuée, l’agent doit lire les droits Miranda au suspect :</p>
+                <blockquote class="blockquote">
+                    <p class="mb-0">« Vous êtes actuellement placé en état d’arrestation.<br>
+                    Vous avez le droit de garder le silence.<br>
+                    Tout ce que vous direz pourra être retenu contre vous devant un tribunal.<br>
+                    Vous avez le droit à un avocat.<br>
+                    Si vous n’en avez pas les moyens, un avocat vous sera commis d’office.<br>
+                    Vous avez le droit à une assistance médicale en cas de blessure.<br>
+                    Avez-vous compris vos droits ? »</p>
+                </blockquote>
+                <p>Si le suspect répond “oui” :</p>
+                <ul>
+                    <li>L’agent doit ensuite demander s’il souhaite exercer l’un de ses droits.<br>
+                    “Souhaitez-vous garder le silence, faire appel à un avocat, ou demander une assistance médicale ?”</li>
+                </ul>
+                <p>Si le suspect répond “non” :</p>
+                <ul>
+                    <li>L’agent doit réexpliquer calmement les droits jusqu’à compréhension claire.</li>
+                    <li>Après trois tentatives, l’agent peut passer à la suite et demander :<br>
+                    “Souhaitez-vous la présence d’un avocat ou une assistance médicale ?”</li>
+                </ul>
+                <p>En cas de vice de procédure, le suspect devra être relâché et les poursuites abandonnées.</p>
+
+                <h4>Si un juge est présent en ville<h4></h4>  le présumé coupable doit obligatoirement lui être présenté avant toute sanction policière.</p>
+                <p>L’agent en charge du suspect doit alors :</p>
+                <ul>
+                    <li>Le transférer au tribunal dans le calme et sous surveillance.</li>
+                    <li>Informer le juge des faits reprochés, des preuves ou témoignages disponibles, ainsi que du comportement du suspect lors de l’arrestation.</li>
+                    <li>Assurer la sécurité de la salle d’audience pendant toute la durée du jugement.</li>
+
+                </ul>
+                <p>Le juge rendra ensuite sa décision, déterminant la sanction légale ou la remise en liberté du présumé coupable.<br>
+                Les forces de l’ordre sont tenues d’appliquer la décision du juge sans contestation et de veiller à son exécution correcte (transfert en cellule, amende, libération, etc.).</p>
+
+                <h4>Fouille</h4>
+                <p>Une fouille s’effectue au commissariat sauf cas particulier.<br>
+                Les objets illégaux trouvés doivent être confisqués.</p>
+            </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Welcome Modal -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="welcomeModalLabel">Bienvenue!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ici tu trouveras les infos pour la police!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Compris!</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="footer bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>&copy; 2025 Vlife | Rockford Police Department. Félix Scott (partie la plus importante du règlement) et Mafouf Honorable (site + légère modification du règlement).</p>
+        </div>
+    </footer>
+    <script>
+        const themeSwitch = document.getElementById('checkbox');
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode') {
+                themeSwitch.checked = true;
+            }
+        }
+
+        themeSwitch.addEventListener('change', function() {
+            if(this.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', '');
+            }
+        });
+
+        // Welcome Modal
+        const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        if (!localStorage.getItem('visited')) {
+            welcomeModal.show();
+            localStorage.setItem('visited', 'true');
+        }
+    </script>
+</body>
+</html>
