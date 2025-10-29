@@ -349,3 +349,45 @@ body.dark-mode a:hover {
 body.dark-mode .blockquote {
     border-left: .25rem solid #7aa2f7;
 }
+
+#radio img {
+    cursor: pointer;
+}
+
+.modal-fullscreen {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+}
+
+.modal-fullscreen .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.modal-fullscreen .modal-body {
+    overflow-y: auto;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .modal-backdrop {
+    background-color: rgba(26, 27, 38, 0.8);
+}
+
+body.dark-mode .modal-header {
+    border-bottom: none;
+}
+
+body.dark-mode .modal-content .btn-close {
+    filter: invert(1);
+}

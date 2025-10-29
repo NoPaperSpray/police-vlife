@@ -91,7 +91,9 @@
             </div>
             <div class="tab-pane fade" id="radio" role="tabpanel" aria-labelledby="radio-tab">
                 <h2 class="mt-3">Code Radio</h2>
-                <img src="coderadio.png" class="img-fluid" alt="Codes radio de la police">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <img src="coderadio.png" class="img-fluid" alt="Codes radio de la police">
+                </a>
                 <h4 class="mt-4">Exemples d'utilisation</h4>
                 <p><strong>Prise / fin de service:</strong><br>
                 <strong>10-8 :</strong> “Dispatch, 10-8 pour l’officier I Honorable, prise de service.”<br>
@@ -226,6 +228,21 @@
     </div>
   </div>
 </div>
+    <!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Code Radio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="coderadio.png" class="img-fluid" alt="Codes radio de la police">
+      </div>
+    </div>
+  </div>
+</div>
+
     <footer class="footer bg-dark text-white text-center py-3 mt-5">
         <div class="container">
             <p>&copy; 2025 Vlife | Rockford Police Department. Félix Scott (partie la plus importante du règlement) et Mafouf Honorable (site + légère modification du règlement).</p>
@@ -259,6 +276,19 @@
             welcomeModal.show();
             localStorage.setItem('visited', 'true');
         }
+
+        // Image Modal close on click outside
+        const imageModal = document.getElementById('imageModal');
+        imageModal.addEventListener('click', function (event) {
+            const modalImage = imageModal.querySelector('img');
+            const modalHeader = imageModal.querySelector('.modal-header');
+
+            // If the click is not on the image and not inside the header
+            if (event.target !== modalImage && !modalHeader.contains(event.target)) {
+                const modal = bootstrap.Modal.getInstance(imageModal);
+                modal.hide();
+            }
+        });
     </script>
 </body>
 </html>
