@@ -94,13 +94,32 @@
                 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal">
                     <img src="coderadio.png" class="img-fluid" alt="Codes radio de la police">
                 </a>
+
+                <div class="my-4">
+                    <h4>Personnalisation des exemples</h4>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="radio-grade" class="form-label">Votre Grade</label>
+                            <input type="text" class="form-control" id="radio-grade" value="Officier I">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="radio-nom" class="form-label">Votre Nom</label>
+                            <input type="text" class="form-control" id="radio-nom" value="Honorable">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="radio-unite" class="form-label">Votre Unité</label>
+                            <input type="text" class="form-control" id="radio-unite" value="Adam-01">
+                        </div>
+                    </div>
+                </div>
+
                 <h4 class="mt-4">Exemples d'utilisation</h4>
                 <p><strong>Prise / fin de service:</strong><br>
-                <strong>10-8 :</strong> “Dispatch, 10-8 pour l’officier I Honorable, prise de service.”<br>
-                <strong>10-7 :</strong> “Dispatch, 10-7, fin de service pour l’officier I Honorable, retour au poste.”</p>
+                <strong>10-8 :</strong> “Dispatch, 10-8 pour l’<span class="radio-grade">Officier I</span> <span class="radio-nom">Honorable</span>, prise de service.”<br>
+                <strong>10-7 :</strong> “Dispatch, 10-7, fin de service pour l’<span class="radio-grade">Officier I</span> <span class="radio-nom">Honorable</span>, retour au poste.”</p>
                 <p><strong>Début / fin de patrouille:</strong><br>
-                <strong>10-41 :</strong> “Adam-01(Nom de votre patrouille affecter) pour Dispatch, 10-41, début de patrouille avec Deputy-Chief Auger et Officier I Honorable”.<br>
-                <strong>10-42 :</strong> “Adam-01 pour Dispatch, 10-42, fin de patrouille.”</p>
+                <strong>10-41 :</strong> “<span class="radio-unite">Adam-01</span> pour Dispatch, 10-41, début de patrouille.”<br>
+                <strong>10-42 :</strong> “<span class="radio-unite">Adam-01</span> pour Dispatch, 10-42, fin de patrouille.”</p>
             </div>
             <div class="tab-pane fade" id="miranda" role="tabpanel" aria-labelledby="miranda-tab">
                 <h2 class="mt-3">Droit Miranda</h2>
@@ -289,6 +308,25 @@
                 modal.hide();
             }
         });
+
+        // Radio call customization
+        const radioGradeInput = document.getElementById('radio-grade');
+        const radioNomInput = document.getElementById('radio-nom');
+        const radioUniteInput = document.getElementById('radio-unite');
+
+        const radioGradeSpans = document.querySelectorAll('.radio-grade');
+        const radioNomSpans = document.querySelectorAll('.radio-nom');
+        const radioUniteSpans = document.querySelectorAll('.radio-unite');
+
+        function updateRadioCalls() {
+            radioGradeSpans.forEach(span => span.textContent = radioGradeInput.value);
+            radioNomSpans.forEach(span => span.textContent = radioNomInput.value);
+            radioUniteSpans.forEach(span => span.textContent = radioUniteInput.value);
+        }
+
+        radioGradeInput.addEventListener('input', updateRadioCalls);
+        radioNomInput.addEventListener('input', updateRadioCalls);
+        radioUniteInput.addEventListener('input', updateRadioCalls);
     </script>
 </body>
 </html>

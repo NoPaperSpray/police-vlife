@@ -406,3 +406,21 @@ body.dark-mode .modal-content .btn-close {
 .tab-content .tab-pane.active {
     animation: fadeIn 0.5s ease-in-out;
 }
+
+/* Form control styling for dark mode */
+body.dark-mode .form-control {
+    background-color: #24283b;
+    color: #a9b1d6;
+    border-color: #414868;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #24283b;
+    color: #a9b1d6;
+    border-color: #7aa2f7;
+    box-shadow: 0 0 0 0.25rem rgba(122, 162, 247, 0.25);
+}
+
+body.dark-mode .form-label {
+    color: #c0caf5;
+}
