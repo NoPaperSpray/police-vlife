@@ -28,7 +28,7 @@
                 <button class="nav-link" id="hierarchie-tab" data-bs-toggle="tab" data-bs-target="#hierarchie" type="button" role="tab" aria-controls="hierarchie" aria-selected="false">Structure hiérarchique</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="uniformes-tab" data-bs-toggle="tab" data-bs-target="#uniformes" type="button" role="tab" aria-controls="uniformes" aria-selected="false">Uniformes</button>
+                <button class="nav-link" id="uniformes-tab" data-bs-toggle="tab" data-bs-target="#uniformes" type="button" role="tab" aria-controls="uniformes" aria-selected="false">Uniformes et Armes</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="radio-tab" data-bs-toggle="tab" data-bs-target="#radio" type="button" role="tab" aria-controls="radio" aria-selected="false">Code Radio</button>
@@ -85,9 +85,13 @@
                 </ul>
             </div>
             <div class="tab-pane fade" id="uniformes" role="tabpanel" aria-labelledby="uniformes-tab">
-                <h2 class="mt-3">Uniformes</h2>
+                <h2 class="mt-3">Uniformes et Armes</h2>
                 <p>Vous pouvez consulter les tenues réglementaires par rang en cliquant sur le lien ci-dessous :</p>
                 <a href="https://docs.google.com/document/d/1tH1BoSTruCAPfL25sU4gBFp3g-SkR2Zhx9ZEpLl694g/edit?tab=t.0" class="btn btn-primary" target="_blank">Voir les tenues réglementaires</a>
+                <h3 class="mt-4">Armes</h3>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#armesModal">
+                    <img src="arme_rpd.png" class="img-fluid" alt="Armes RPD" style="width: 50%;">
+                </a>
             </div>
             <div class="tab-pane fade" id="radio" role="tabpanel" aria-labelledby="radio-tab">
                 <h2 class="mt-3">Code Radio</h2>
@@ -273,6 +277,21 @@
   </div>
 </div>
 
+<!-- Armes Modal -->
+<div class="modal fade" id="armesModal" tabindex="-1" aria-labelledby="armesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="armesModalLabel">Armes</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="arme_rpd.png" class="img-fluid" alt="Armes RPD">
+      </div>
+    </div>
+  </div>
+</div>
+
     <footer class="footer bg-dark text-white text-center py-3 mt-5">
         <div class="container">
             <p>&copy; 2025 Vlife | Rockford Police Department. Félix Scott (partie la plus importante du règlement) et Mafouf Honorable (site + légère modification du règlement).</p>
@@ -316,6 +335,18 @@
             // If the click is not on the image and not inside the header
             if (event.target !== modalImage && !modalHeader.contains(event.target)) {
                 const modal = bootstrap.Modal.getInstance(imageModal);
+                modal.hide();
+            }
+        });
+
+        const armesModal = document.getElementById('armesModal');
+        armesModal.addEventListener('click', function (event) {
+            const modalImage = armesModal.querySelector('img');
+            const modalHeader = armesModal.querySelector('.modal-header');
+
+            // If the click is not on the image and not inside the header
+            if (event.target !== modalImage && !modalHeader.contains(event.target)) {
+                const modal = bootstrap.Modal.getInstance(armesModal);
                 modal.hide();
             }
         });
