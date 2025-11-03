@@ -430,3 +430,23 @@ body.dark-mode .list-group-item {
     border-color: #414868;
     color: #a9b1d6;
 }
+
+/* Hover effects for images */
+img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.02); /* Slightly enlarge */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Hover effects for buttons */
+.btn {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Lift button slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
