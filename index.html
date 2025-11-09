@@ -113,7 +113,7 @@
                     <div class="row g-3">
                         <div class="col-md-4">
                             <label for="radio-grade" class="form-label">Votre Grade</label>
-                            <input type="text" class="form-control" id="radio-grade" value="Officier I">
+                            <input type="text" class="form-control" id="radio-grade" value="Sergents I">
                         </div>
                         <div class="col-md-4">
                             <label for="radio-nom" class="form-label">Votre Nom</label>
@@ -128,8 +128,8 @@
 
                 <h4 class="mt-4">Exemples écrit (/r dans le chat)</h4>
                 <ul class="list-group">
-                    <li class="list-group-item"><strong>Prise de service (10-8) :</strong> Central, 10-8 pour l’<span class="radio-grade">Officier I</span> <span class="radio-nom">Honorable</span>, prise de service.”</li>
-                    <li class="list-group-item"><strong>Fin de service (10-7) :</strong> Central, 10-7, fin de service pour l’<span class="radio-grade">Officier I</span> <span class="radio-nom">Honorable</span>, retour au poste.”</li>
+                    <li class="list-group-item"><strong>Prise de service (10-8) :</strong> Central, 10-8 pour <span class="radio-grade">Sergents I</span> <span class="radio-nom">Honorable</span>, prise de service.”</li>
+                    <li class="list-group-item"><strong>Fin de service (10-7) :</strong> Central, 10-7, fin de service pour <span class="radio-grade">Sergents I</span> <span class="radio-nom">Honorable</span>, retour au poste.”</li>
                     <li class="list-group-item"><strong>Début de patrouille (10-41) :</strong> “<span class="radio-unite">Adam-01</span> pour Central, 10-41, début de patrouille.”</li>
                     <li class="list-group-item"><strong>Fin de patrouille (10-42) :</strong> “<span class="radio-unite">Adam-01</span> pour Central, 10-42, fin de patrouille.”</li>
                 </ul>
@@ -192,11 +192,40 @@
                     </div>
                     <div class="tab-pane fade" id="pills-pyramid" role="tabpanel" aria-labelledby="pills-pyramid-tab">
                         <div class="pyramid-container mt-4">
-                            <div class="pyramid-level bg-danger text-white">Direction</div>
-                            <div class="pyramid-level bg-warning text-dark">État-Major</div>
-                            <div class="pyramid-level bg-info text-dark">Haut Corps de Commandement</div>
-                            <div class="pyramid-level bg-primary text-white">Corps de Commandement</div>
-                            <div class="pyramid-level bg-success text-white">Corps des Officiers</div>
+                            <div class="pyramid-level bg-danger text-white">
+                                Direction
+                            </div>
+                            <div class="pyramid-level bg-warning text-dark">
+                                État-Major
+                                <div class="grade-details">
+                                    <p>Chief</p>
+                                    <p>Deputy-Chief</p>
+                                    <p>Commandant</p>
+                                </div>
+                            </div>
+                            <div class="pyramid-level bg-info text-dark">
+                                Haut Corps de Commandement
+                                <div class="grade-details">
+                                    <p>Capitaines</p>
+                                    <p>Lieutenants</p>
+                                    <p>Majors</p>
+                                </div>
+                            </div>
+                            <div class="pyramid-level bg-primary text-white">
+                                Corps de Commandement
+                                <div class="grade-details">
+                                    <p>Sergents I, II, Chef</p>
+                                    <p>Sous-officiers d’encadrement</p>
+                                </div>
+                            </div>
+                            <div class="pyramid-level bg-success text-white">
+                                Corps des Officiers
+                                <div class="grade-details">
+                                    <p>Officiers</p>
+                                    <p>Agents</p>
+                                    <p>Recrues</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -414,6 +443,26 @@
         radioGradeInput.addEventListener('input', updateRadioCalls);
         radioNomInput.addEventListener('input', updateRadioCalls);
         radioUniteInput.addEventListener('input', updateRadioCalls);
+
+        // Pyramid hover script
+        const pyramidLevels = document.querySelectorAll('.pyramid-level');
+        pyramidLevels.forEach(level => {
+            const details = level.querySelector('.grade-details');
+            if (details) {
+                level.addEventListener('mouseenter', () => {
+                    details.style.opacity = '1';
+                    details.style.visibility = 'visible';
+                });
+                level.addEventListener('mouseleave', () => {
+                    details.style.opacity = '0';
+                    details.style.visibility = 'hidden';
+                });
+                level.addEventListener('mousemove', e => {
+                    details.style.left = `${e.clientX + 15}px`;
+                    details.style.top = `${e.clientY + 15}px`;
+                });
+            }
+        });
     </script>
 </body>
 </html>
