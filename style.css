@@ -71,14 +71,19 @@ p {
 }
 
 .nav-tabs .nav-link:hover {
-    background-color: #e2e6ea;
+    background-color: #eaf5ff;
     color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 150, 255, 0.8),
+                0 0 15px rgba(0, 150, 255, 0.6),
+                0 0 30px rgba(0, 150, 255, 0.4);
 }
 
 .nav-tabs .nav-link.active {
     color: #fff;
-    background-color: #007bff; /* Active tab accent color */
-    box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+    background-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 1),
+                0 0 20px rgba(0, 123, 255, 0.7),
+                0 0 40px rgba(0, 123, 255, 0.5);
     position: relative;
     z-index: 1;
 }
@@ -283,12 +288,17 @@ body.dark-mode .nav-tabs .nav-link {
 
 body.dark-mode .nav-tabs .nav-link:hover {
     background-color: #414868;
+    box-shadow: 0 0 5px rgba(122, 162, 247, 0.9),
+                0 0 15px rgba(122, 162, 247, 0.7),
+                0 0 30px rgba(122, 162, 247, 0.5);
 }
 
 body.dark-mode .nav-tabs .nav-link.active {
     background-color: #7aa2f7;
     color: #1a1b26;
-    box-shadow: 0 4px 10px rgba(122,162,247,0.4);
+    box-shadow: 0 0 8px rgba(122, 162, 247, 1),
+                0 0 20px rgba(122, 162, 247, 0.8),
+                0 0 45px rgba(122, 162, 247, 0.6);
 }
 
 body.dark-mode .tab-content .tab-pane {
@@ -328,14 +338,18 @@ body.dark-mode .footer {
 }
 
 body.dark-mode .btn-primary {
-    background-color: #7aa2f7;
+    background-color: #414868; /* Darker background for contrast */
     border-color: #7aa2f7;
-    color: #1a1b26;
+    color: #c0caf5; /* Lighter text color */
 }
 
 body.dark-mode .btn-primary:hover {
     background-color: #9ece6a;
     border-color: #9ece6a;
+    color: #1a1b26; /* Dark text for contrast on green background */
+    box-shadow: 0 0 5px rgba(158, 206, 106, 0.9),
+                0 0 15px rgba(158, 206, 106, 0.7),
+                0 0 30px rgba(158, 206, 106, 0.5);
 }
 
 body.dark-mode a {
@@ -447,6 +461,8 @@ img:hover {
 }
 
 .btn:hover {
-    transform: translateY(-2px); /* Lift button slightly */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8),
+                0 0 15px rgba(0, 123, 255, 0.6),
+                0 0 30px rgba(0, 123, 255, 0.4);
 }
