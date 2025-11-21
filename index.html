@@ -28,7 +28,7 @@
                 <button class="nav-link" id="hierarchie-tab" data-bs-toggle="tab" data-bs-target="#hierarchie" type="button" role="tab" aria-controls="hierarchie" aria-selected="false">Structure hiérarchique</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="uniformes-tab" data-bs-toggle="tab" data-bs-target="#uniformes" type="button" role="tab" aria-controls="uniformes" aria-selected="false">Uniformes</button>
+                <button class="nav-link" id="uniformes-tab" data-bs-toggle="tab" data-bs-target="#uniformes" type="button" role="tab" aria-controls="uniformes" aria-selected="false">Uniformes et Armes</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="radio-tab" data-bs-toggle="tab" data-bs-target="#radio" type="button" role="tab" aria-controls="radio" aria-selected="false">Code Radio</button>
@@ -85,14 +85,27 @@
                 </ul>
             </div>
             <div class="tab-pane fade" id="uniformes" role="tabpanel" aria-labelledby="uniformes-tab">
-                <h2 class="mt-3">Uniformes</h2>
-                <p>Vous pouvez consulter les tenues réglementaires par rang en cliquant sur le lien ci-dessous :</p>
-                <a href="https://docs.google.com/document/d/1tH1BoSTruCAPfL25sU4gBFp3g-SkR2Zhx9ZEpLl694g/edit?tab=t.0" class="btn btn-primary" target="_blank">Voir les tenues réglementaires</a>
+                <div class="row">
+                    <div class="col-md-7">
+                        <h3 class="mt-3">Uniformes</h3>
+                        <p>L'uniforme est le symbole de notre engagement et de notre professionnalisme. Il reflète l'ordre et la discipline du Rockford Police Department. Ce document détaille les tenues réglementaires pour chaque grade.</p>
+                        <p>Vous pouvez consulter les tenues réglementaires par rang en cliquant sur le lien ci-dessous :</p>
+                        <a href="https://docs.google.com/document/d/1tH1BoSTruCAPfL25sU4gBFp3g-SkR2Zhx9ZEpLl694g/edit?tab=t.0" class="btn btn-primary" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill me-2" viewBox="0 0 16 16">
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
+</svg>Voir les tenues réglementaires</a>
+                    </div>
+                    <div class="col-md-5">
+                        <h3 class="mt-3">Armes</h3>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#armesModal">
+                            <img src="media/uniforme_et_armes/arme_rpd.png" class="img-fluid" alt="Armes RPD" style="width: 100%;">
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="radio" role="tabpanel" aria-labelledby="radio-tab">
                 <h2 class="mt-3">Code Radio</h2>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal">
-                    <img src="coderadio.png" class="img-fluid" alt="Codes radio de la police">
+                    <img src="media/code_radio/coderadio.png" class="img-fluid" alt="Codes radio de la police">
                 </a>
 
                 <div class="my-4">
@@ -100,7 +113,7 @@
                     <div class="row g-3">
                         <div class="col-md-4">
                             <label for="radio-grade" class="form-label">Votre Grade</label>
-                            <input type="text" class="form-control" id="radio-grade" value="Officier I">
+                            <input type="text" class="form-control" id="radio-grade" value="Sergents I">
                         </div>
                         <div class="col-md-4">
                             <label for="radio-nom" class="form-label">Votre Nom</label>
@@ -113,23 +126,35 @@
                     </div>
                 </div>
 
-                <h4 class="mt-4">Exemples d'utilisation</h4>
-                <p><strong>Prise / fin de service:</strong><br>
-                <strong>10-8 :</strong> “Dispatch, 10-8 pour l’<span class="radio-grade">Officier I</span> <span class="radio-nom">Honorable</span>, prise de service.”<br>
-                <strong>10-7 :</strong> “Dispatch, 10-7, fin de service pour l’<span class="radio-grade">Officier I</span> <span class="radio-nom">Honorable</span>, retour au poste.”</p>
-                <p><strong>Début / fin de patrouille:</strong><br>
-                <strong>10-41 :</strong> “<span class="radio-unite">Adam-01</span> pour Dispatch, 10-41, début de patrouille.”<br>
-                <strong>10-42 :</strong> “<span class="radio-unite">Adam-01</span> pour Dispatch, 10-42, fin de patrouille.”</p>
+                <h4 class="mt-4">Exemples écrit (/r dans le chat)</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Prise de service (10-8) :</strong> Central, 10-8 pour <span class="radio-grade">Sergents I</span> <span class="radio-nom">Honorable</span>, prise de service.”</li>
+                    <li class="list-group-item"><strong>Fin de service (10-7) :</strong> Central, 10-7, fin de service pour <span class="radio-grade">Sergents I</span> <span class="radio-nom">Honorable</span>, retour au poste.”</li>
+                    <li class="list-group-item"><strong>Début de patrouille (10-41) :</strong> “<span class="radio-unite">Adam-01</span> pour Central, 10-41, début de patrouille.”</li>
+                    <li class="list-group-item"><strong>Fin de patrouille (10-42) :</strong> “<span class="radio-unite">Adam-01</span> pour Central, 10-42, fin de patrouille.”</li>
+                </ul>
+
+                <h4 class="mt-4">Exemples Radio</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>10-28 (Vérification de plaque) :</strong> "Central, je suis sur un 10-28 sur une plaque d'immatriculation [Numéro de plaque], véhicule [Couleur et modèle], secteur [Secteur]."</li>
+                    <li class="list-group-item"><strong>10-5 (Demande de renfort) :</strong> "10-29, suspect rechercher [Description suspect], [Secteur connu/Dernier connu]."</li>
+                    <li class="list-group-item"><strong>10-99 (Officier à terre) :</strong> "10-99, Officier à terre, besoin d'une ambulance et d'unités disponibles [Lieu précis]."</li>
+                    <li class="list-group-item"><strong>10-60 (Barrage mis en place) :</strong>  "10-60, Barrage établi au niveau de [Lieu précis]."</li>          
+                    <li class="list-group-item"><strong>10-31 (Début de course-poursuite) :</strong> "10-31, Début de course-poursuite sur un(e) [Modèle du véhicule] [Couleur], direction [Direction: Zone indue, disco, quartier riche...]."</li>
+                    <li class="list-group-item"><strong>10-98 (Fin de course-poursuite) :</strong> "Fin de course-poursuite, suspect interpellé / en fuite, secteur [Secteur]."</li>
+
+                </ul>
             </div>
             <div class="tab-pane fade" id="miranda" role="tabpanel" aria-labelledby="miranda-tab">
                 <h2 class="mt-3">Droit Miranda</h2>
-                <p class="lead">« Vous êtes actuellement placé en état d’arrestation.<br>
+                <p>Nous sommes actuellement le <span id="current-datetime"></span>.</p>
+                <p class="lead">Vous êtes actuellement placé en état d’arrestation.<br>
                     Vous avez le droit de garder le silence.<br>
                     Tout ce que vous direz pourra être retenu contre vous devant un tribunal.<br>
                     Vous avez le droit à un avocat.<br>
                     Si vous n’en avez pas les moyens, un avocat vous sera commis d’office.<br>
-                    Vous avez le droit à une assistance médicale en cas de blessure.<br>
-                    Avez-vous compris vos droits ? »</p>
+                    Vous avez également le droit à une assistance médicale en cas de blessure.<br>
+                    Avez-vous compris vos droits ?</p>
             </div>
             <div class="tab-pane fade" id="hierarchie" role="tabpanel" aria-labelledby="hierarchie-tab"> 
                 <h2 class="mt-3">Structure hiérarchique</h2>
@@ -167,11 +192,40 @@
                     </div>
                     <div class="tab-pane fade" id="pills-pyramid" role="tabpanel" aria-labelledby="pills-pyramid-tab">
                         <div class="pyramid-container mt-4">
-                            <div class="pyramid-level bg-danger text-white">Direction</div>
-                            <div class="pyramid-level bg-warning text-dark">État-Major</div>
-                            <div class="pyramid-level bg-info text-dark">Haut Corps de Commandement</div>
-                            <div class="pyramid-level bg-primary text-white">Corps de Commandement</div>
-                            <div class="pyramid-level bg-success text-white">Corps des Officiers</div>
+                            <div class="pyramid-level bg-danger text-white">
+                                Direction
+                            </div>
+                            <div class="pyramid-level bg-warning text-dark">
+                                État-Major
+                                <div class="grade-details">
+                                    <p>Chief</p>
+                                    <p>Deputy-Chief</p>
+                                    <p>Commandant</p>
+                                </div>
+                            </div>
+                            <div class="pyramid-level bg-info text-dark">
+                                Haut Corps de Commandement
+                                <div class="grade-details">
+                                    <p>Capitaines</p>
+                                    <p>Lieutenants</p>
+                                    <p>Majors</p>
+                                </div>
+                            </div>
+                            <div class="pyramid-level bg-primary text-white">
+                                Corps de Commandement
+                                <div class="grade-details">
+                                    <p>Sergents I, II, Chef</p>
+                                    <p>Sous-officiers d’encadrement</p>
+                                </div>
+                            </div>
+                            <div class="pyramid-level bg-success text-white">
+                                Corps des Officiers
+                                <div class="grade-details">
+                                    <p>Officiers</p>
+                                    <p>Agents</p>
+                                    <p>Recrues</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,7 +310,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-center">
-        <img src="coderadio.png" class="img-fluid" alt="Codes radio de la police">
+        <img src="media/code_radio/coderadio.png" class="img-fluid" alt="Codes radio de la police">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Armes Modal -->
+<div class="modal fade" id="armesModal" tabindex="-1" aria-labelledby="armesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="armesModalLabel">Armes</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="media/uniforme_et_armes/arme_rpd.png" class="img-fluid" alt="Armes RPD">
       </div>
     </div>
   </div>
@@ -289,6 +358,18 @@
             }
         });
 
+        // Set current date and time for Miranda rights
+        const datetimeSpan = document.getElementById('current-datetime');
+        if (datetimeSpan) {
+            function updateTime() {
+                const now = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+                datetimeSpan.textContent = now.toLocaleDateString('fr-FR', options);
+            }
+            updateTime();
+            setInterval(updateTime, 1000);
+        }
+
         // Welcome Modal
         const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
         if (!localStorage.getItem('visited')) {
@@ -309,6 +390,18 @@
             }
         });
 
+        const armesModal = document.getElementById('armesModal');
+        armesModal.addEventListener('click', function (event) {
+            const modalImage = armesModal.querySelector('img');
+            const modalHeader = armesModal.querySelector('.modal-header');
+
+            // If the click is not on the image and not inside the header
+            if (event.target !== modalImage && !modalHeader.contains(event.target)) {
+                const modal = bootstrap.Modal.getInstance(armesModal);
+                modal.hide();
+            }
+        });
+
         // Radio call customization
         const radioGradeInput = document.getElementById('radio-grade');
         const radioNomInput = document.getElementById('radio-nom');
@@ -318,15 +411,58 @@
         const radioNomSpans = document.querySelectorAll('.radio-nom');
         const radioUniteSpans = document.querySelectorAll('.radio-unite');
 
-        function updateRadioCalls() {
-            radioGradeSpans.forEach(span => span.textContent = radioGradeInput.value);
-            radioNomSpans.forEach(span => span.textContent = radioNomInput.value);
-            radioUniteSpans.forEach(span => span.textContent = radioUniteInput.value);
+        // Load saved values from localStorage
+        if (localStorage.getItem('radio-grade')) {
+            radioGradeInput.value = localStorage.getItem('radio-grade');
         }
+        if (localStorage.getItem('radio-nom')) {
+            radioNomInput.value = localStorage.getItem('radio-nom');
+        }
+        if (localStorage.getItem('radio-unite')) {
+            radioUniteInput.value = localStorage.getItem('radio-unite');
+        }
+
+        function updateRadioCalls() {
+            const grade = radioGradeInput.value;
+            const nom = radioNomInput.value;
+            const unite = radioUniteInput.value;
+
+            radioGradeSpans.forEach(span => span.textContent = grade);
+            radioNomSpans.forEach(span => span.textContent = nom);
+            radioUniteSpans.forEach(span => span.textContent = unite);
+
+            // Save values to localStorage
+            localStorage.setItem('radio-grade', grade);
+            localStorage.setItem('radio-nom', nom);
+            localStorage.setItem('radio-unite', unite);
+        }
+
+        // Initial update to display saved values
+        updateRadioCalls();
 
         radioGradeInput.addEventListener('input', updateRadioCalls);
         radioNomInput.addEventListener('input', updateRadioCalls);
         radioUniteInput.addEventListener('input', updateRadioCalls);
+
+        // Pyramid hover script
+        const pyramidLevels = document.querySelectorAll('.pyramid-level');
+        pyramidLevels.forEach(level => {
+            const details = level.querySelector('.grade-details');
+            if (details) {
+                level.addEventListener('mouseenter', () => {
+                    details.style.opacity = '1';
+                    details.style.visibility = 'visible';
+                });
+                level.addEventListener('mouseleave', () => {
+                    details.style.opacity = '0';
+                    details.style.visibility = 'hidden';
+                });
+                level.addEventListener('mousemove', e => {
+                    details.style.left = `${e.clientX + 15}px`;
+                    details.style.top = `${e.clientY + 15}px`;
+                });
+            }
+        });
     </script>
 </body>
 </html>

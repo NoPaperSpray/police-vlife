@@ -71,14 +71,19 @@ p {
 }
 
 .nav-tabs .nav-link:hover {
-    background-color: #e2e6ea;
+    background-color: #eaf5ff;
     color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 150, 255, 0.8),
+                0 0 15px rgba(0, 150, 255, 0.6),
+                0 0 30px rgba(0, 150, 255, 0.4);
 }
 
 .nav-tabs .nav-link.active {
     color: #fff;
-    background-color: #007bff; /* Active tab accent color */
-    box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+    background-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 1),
+                0 0 20px rgba(0, 123, 255, 0.7),
+                0 0 40px rgba(0, 123, 255, 0.5);
     position: relative;
     z-index: 1;
 }
@@ -137,9 +142,52 @@ p {
 }
 
 .pyramid-level:hover {
-    transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    z-index: 10; /* Ensure the hovered element is on top */
 }
+
+.pyramid-level .grade-details {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.85); /* More transparent background */
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 4px 12px rgba(0,0,0,0.1); /* Stronger blue glow */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, left 0.1s ease-out, top 0.1s ease-out;
+    white-space: nowrap;
+    z-index: 20;
+    pointer-events: none;
+}
+
+body.dark-mode .pyramid-level .grade-details {
+    background-color: rgba(36, 40, 59, 0.85); /* More transparent dark mode background */
+    box-shadow: 0 0 15px rgba(122, 162, 247, 0.7), 0 4px 12px rgba(0,0,0,0.2); /* Stronger dark mode blue glow */
+}
+
+.pyramid-level:hover .grade-details {
+    opacity: 1;
+    visibility: visible;
+}
+
+.grade-details p {
+    margin: 0;
+    padding: 2px 5px;
+    color: #343a40;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+body.dark-mode .pyramid-level .grade-details {
+    background-color: #24283b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .grade-details p {
+    color: #c0caf5;
+}
+
 
 /* Adjust widths and margins for pyramid shape */
 .pyramid-level:nth-child(1) { /* Direction */
@@ -283,12 +331,17 @@ body.dark-mode .nav-tabs .nav-link {
 
 body.dark-mode .nav-tabs .nav-link:hover {
     background-color: #414868;
+    box-shadow: 0 0 5px rgba(122, 162, 247, 0.9),
+                0 0 15px rgba(122, 162, 247, 0.7),
+                0 0 30px rgba(122, 162, 247, 0.5);
 }
 
 body.dark-mode .nav-tabs .nav-link.active {
     background-color: #7aa2f7;
     color: #1a1b26;
-    box-shadow: 0 4px 10px rgba(122,162,247,0.4);
+    box-shadow: 0 0 8px rgba(122, 162, 247, 1),
+                0 0 20px rgba(122, 162, 247, 0.8),
+                0 0 45px rgba(122, 162, 247, 0.6);
 }
 
 body.dark-mode .tab-content .tab-pane {
@@ -321,6 +374,7 @@ body.dark-mode .pyramid-level:nth-child(3) { background-color: #7dcfff; } /* Cya
 body.dark-mode .pyramid-level:nth-child(4) { background-color: #7aa2f7; } /* Blue */
 body.dark-mode .pyramid-level:nth-child(5) { background-color: #9ece6a; } /* Green */
 
+
 body.dark-mode .footer {
     background-color: #1e2029;
     color: #a9b1d6;
@@ -328,14 +382,18 @@ body.dark-mode .footer {
 }
 
 body.dark-mode .btn-primary {
-    background-color: #7aa2f7;
+    background-color: #414868; /* Darker background for contrast */
     border-color: #7aa2f7;
-    color: #1a1b26;
+    color: #c0caf5; /* Lighter text color */
 }
 
 body.dark-mode .btn-primary:hover {
     background-color: #9ece6a;
     border-color: #9ece6a;
+    color: #1a1b26; /* Dark text for contrast on green background */
+    box-shadow: 0 0 5px rgba(158, 206, 106, 0.9),
+                0 0 15px rgba(158, 206, 106, 0.7),
+                0 0 30px rgba(158, 206, 106, 0.5);
 }
 
 body.dark-mode a {
@@ -423,4 +481,32 @@ body.dark-mode .form-control:focus {
 
 body.dark-mode .form-label {
     color: #c0caf5;
+}
+
+body.dark-mode .list-group-item {
+    background-color: #24283b;
+    border-color: #414868;
+    color: #a9b1d6;
+}
+
+/* Hover effects for images */
+img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.02); /* Slightly enlarge */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Hover effects for buttons */
+.btn {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8),
+                0 0 15px rgba(0, 123, 255, 0.6),
+                0 0 30px rgba(0, 123, 255, 0.4);
 }

@@ -1,0 +1,36 @@
+GUIDE D'ARRESTATION-Edition 2025
+Lors de l'arrestation d'un suspect, vous devrez veiller à différentes informations, être sûr que la personne a effectivement un crime à se reprocher, que ce crime est avéré, et vous devrez l'emmener au Poste de Police (PDP).
+Une fois dans le poste de police, avant d'effectuer une fouille ou l'amendement de l'individu, vous devrez citer les droits Miranda.
+"Nous sommes aujourd'hui le DATE, il est actuellement HEURE, et vous êtes arrêté pour les motifs suivants: MOTIFS. Vous avez le droit de garder le silence. Tout ce que vous dites peut et sera utilisé contre vous devant un tribunal. Vous avez le droit à un avocat. Si vous n'avez pas les moyens de payer un avocat, un avocat vous sera nommé gratuitement. À n'importe quel moment de la procédure vous pourrez exercer les droits suivants: Ne répondre à aucune question ou ne faire aucune déposition. Vous pouvez également bénéficier d'un apport de nourriture ou de soins si vous en ressentez le besoin."
+Vous procéderez ensuite à la fouille de l'individu. Pour ce faire, le suspect doit se tenir dos à vous contre un mur dans le PDP. Vous annoncerez la phrase suivante :
+"Si vous vous retournez sans en avoir l'instruction, vous écoperez d'une amende pour "Refus d'obtemperer". Si vous réitérez vos actes, l'amende est cumulable."
+Ensuite, vous fouillerez l'individu une première fois. Si le suspect est armé, vous lui demanderez s'il possède une licence d'arme. (Indisponible en ce moment) Si tel est le cas, vous le démenotterez afin qu'il sorte sa licence d'arme, puis vous le remenotterez.
+Cependant, il est important de noter que tout meurtre sur des agents, des civils, ou toute utilisation d'une arme non conforme à sa licence invalide la possession de cette dernière.
+
+Vous retirerez ensuite les armes.
+Si l'individu demande un avocat, vous ne pourrez pas effectuer d'amendement avant l'arrivée de l'avocat.
+Vous devrez également appeler un avocat comme ceci dans le journal de la ville :
+"/advert Un avocat est demandé au PDP dans un délai de 3 minutes."
+L'avocat devra se présenter dans le hall visiteur du PDP. Toute personne passant par le parking sera refusée dans le PDP. L'avocat doit également se présenter dans les délais, à savoir 3 minutes après l'appel d'un avocat, sinon son droit à représenter le client sera inefficace.
+Si l'individu demande des soins,
+"/advert Un médecin est demandé au PDP dans un délai de 3 minutes."
+Le médecin devra se présenter dans le hall visiteur du PDP. Toute personne passant par le parking sera refusée dans le PDP. Le médecin doit également se présenter dans les délais, à savoir 3 minutes après l'appel d'un médecin, sinon son intervention sera inefficace, si personne ne se déplace, vous devrez faire les premiers soins: "/me Effectue les premiers soins".
+Si l'individu demande de la nourriture,
+"/advert Un cuisinier est demandé au PDP dans un délai de 3 minutes."
+Le cuisinier devra se présenter dans le hall visiteur du PDP. Toute personne passant par le parking sera refusée dans le PDP. Le cuisinier doit également se présenter dans les délais, à savoir 3 minutes après l'appel d'un cuisinier, si aucun cuisinier n'est disponible ou ne vient, vous devrez vous-même commander sur place. Vous avez deux options: soit vous envoyez un collègue, soit vous prenez l'individu arrêté en voiture avec vous, puis vous le ramenez au PDP pour poursuivre l'arrestation une fois qu'il a mangé.
+Vous devez également vous référer au tableau des vices de procédures afin de ne pas compromettre l'arrestation de l'individu:
+VICE DE PROCEDURE
+Un agent de police se doit d'arrêter un citoyen seulement en cas de delit ou de crime. Une contravention ne peut justifier une arrestation
+La non-lecture des droits Miranda ou le refus de relire une deuxième fois les droits du M.E.C est un vice de procédure.
+Ecouter l'entrevue entre un avocat et le M.E.C sans leur autorisation est un vice de procédure
+Menotter ou fouiller une personne sans raison valables est considéré comme un vice de procédure.
+
+RPD- Justice
+Toute insulte ou usage excessif ou non justifié de lo violence à l'encontre du M.E.C est considéré comme un vice de procédure.
+L'amendement et l'interrogatoire doivent se faire en présence d'un avocat (si demandé).
+Enfermer volontairement ou non un avocat et son client dans une pièce du PDP est considéré comme un vice de procédure.
+Si la procédure d'arrestation ne débute pas dans les 20 minutes suivant l'arrivée au PDP, le M.E.C doit être libéré.
+
+Puis vous procéderez aux amendes.
+Rappel: un individu est dans l'obligation totale de payer ses amendes. S'il ne paie pas, il prendra donc un temps de prison maximal. En revanche, s'il paie, le temps de prison est réduit de 30%.
+Une fois les amendes émises, vous conduirez le suspect en cellule et procéderez à son arrestation avec "l'arrest Stick".
