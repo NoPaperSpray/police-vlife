@@ -1,36 +1,234 @@
-GUIDE D'ARRESTATION-Edition 2025
-Lors de l'arrestation d'un suspect, vous devrez veiller à différentes informations, être sûr que la personne a effectivement un crime à se reprocher, que ce crime est avéré, et vous devrez l'emmener au Poste de Police (PDP).
-Une fois dans le poste de police, avant d'effectuer une fouille ou l'amendement de l'individu, vous devrez citer les droits Miranda.
-"Nous sommes aujourd'hui le DATE, il est actuellement HEURE, et vous êtes arrêté pour les motifs suivants: MOTIFS. Vous avez le droit de garder le silence. Tout ce que vous dites peut et sera utilisé contre vous devant un tribunal. Vous avez le droit à un avocat. Si vous n'avez pas les moyens de payer un avocat, un avocat vous sera nommé gratuitement. À n'importe quel moment de la procédure vous pourrez exercer les droits suivants: Ne répondre à aucune question ou ne faire aucune déposition. Vous pouvez également bénéficier d'un apport de nourriture ou de soins si vous en ressentez le besoin."
-Vous procéderez ensuite à la fouille de l'individu. Pour ce faire, le suspect doit se tenir dos à vous contre un mur dans le PDP. Vous annoncerez la phrase suivante :
-"Si vous vous retournez sans en avoir l'instruction, vous écoperez d'une amende pour "Refus d'obtemperer". Si vous réitérez vos actes, l'amende est cumulable."
-Ensuite, vous fouillerez l'individu une première fois. Si le suspect est armé, vous lui demanderez s'il possède une licence d'arme. (Indisponible en ce moment) Si tel est le cas, vous le démenotterez afin qu'il sorte sa licence d'arme, puis vous le remenotterez.
-Cependant, il est important de noter que tout meurtre sur des agents, des civils, ou toute utilisation d'une arme non conforme à sa licence invalide la possession de cette dernière.
+ GUIDE D’ARRESTATION – RP
 
-Vous retirerez ensuite les armes.
-Si l'individu demande un avocat, vous ne pourrez pas effectuer d'amendement avant l'arrivée de l'avocat.
-Vous devrez également appeler un avocat comme ceci dans le journal de la ville :
-"/advert Un avocat est demandé au PDP dans un délai de 3 minutes."
-L'avocat devra se présenter dans le hall visiteur du PDP. Toute personne passant par le parking sera refusée dans le PDP. L'avocat doit également se présenter dans les délais, à savoir 3 minutes après l'appel d'un avocat, sinon son droit à représenter le client sera inefficace.
-Si l'individu demande des soins,
-"/advert Un médecin est demandé au PDP dans un délai de 3 minutes."
-Le médecin devra se présenter dans le hall visiteur du PDP. Toute personne passant par le parking sera refusée dans le PDP. Le médecin doit également se présenter dans les délais, à savoir 3 minutes après l'appel d'un médecin, sinon son intervention sera inefficace, si personne ne se déplace, vous devrez faire les premiers soins: "/me Effectue les premiers soins".
-Si l'individu demande de la nourriture,
-"/advert Un cuisinier est demandé au PDP dans un délai de 3 minutes."
-Le cuisinier devra se présenter dans le hall visiteur du PDP. Toute personne passant par le parking sera refusée dans le PDP. Le cuisinier doit également se présenter dans les délais, à savoir 3 minutes après l'appel d'un cuisinier, si aucun cuisinier n'est disponible ou ne vient, vous devrez vous-même commander sur place. Vous avez deux options: soit vous envoyez un collègue, soit vous prenez l'individu arrêté en voiture avec vous, puis vous le ramenez au PDP pour poursuivre l'arrestation une fois qu'il a mangé.
-Vous devez également vous référer au tableau des vices de procédures afin de ne pas compromettre l'arrestation de l'individu:
-VICE DE PROCEDURE
-Un agent de police se doit d'arrêter un citoyen seulement en cas de delit ou de crime. Une contravention ne peut justifier une arrestation
-La non-lecture des droits Miranda ou le refus de relire une deuxième fois les droits du M.E.C est un vice de procédure.
-Ecouter l'entrevue entre un avocat et le M.E.C sans leur autorisation est un vice de procédure
-Menotter ou fouiller une personne sans raison valables est considéré comme un vice de procédure.
+Édition 2025 – Version unifiée
 
-RPD- Justice
-Toute insulte ou usage excessif ou non justifié de lo violence à l'encontre du M.E.C est considéré comme un vice de procédure.
-L'amendement et l'interrogatoire doivent se faire en présence d'un avocat (si demandé).
-Enfermer volontairement ou non un avocat et son client dans une pièce du PDP est considéré comme un vice de procédure.
-Si la procédure d'arrestation ne débute pas dans les 20 minutes suivant l'arrivée au PDP, le M.E.C doit être libéré.
+1. Conditions d’interpellation
 
-Puis vous procéderez aux amendes.
-Rappel: un individu est dans l'obligation totale de payer ses amendes. S'il ne paie pas, il prendra donc un temps de prison maximal. En revanche, s'il paie, le temps de prison est réduit de 30%.
-Une fois les amendes émises, vous conduirez le suspect en cellule et procéderez à son arrestation avec "l'arrest Stick".
+Une personne ne peut être interpellée que dans un cadre strictement légal et justifié (en rp).
+
+Motifs valables d’interpellation :
+
+Surpris en flagrant délit (vol, agression, effraction, meurtre, trafic, prise d’otage, etc.) ;
+
+Désigné formellement par un témoin fiable et cohérent ;
+
+Identifié via une preuve matérielle claire (caméras, radio, description précise, plaque voiture: sauf si volée) ;
+
+Visé par un mandat valide ou un ordre hiérarchique direct.
+
+Motifs NON valables :
+
+Simple suspicion vague
+
+Mauvaise attitude: Insulte ou provocation verbale
+
+Présence dans une zone sensible sans preuve (Sinon c'est méta)
+
+⚠️ Une contravention seule ne justifie JAMAIS une arrestation.
+
+Procédure lors de l’interpellation :
+
+Annonce orale RP :
+
+« RPD, vous êtes interpellé, veuillez lever les mains et ne pas bouger. »
+
+En cas de coopération : menottage et sécurisation.
+
+En cas de fuite : code radio et poursuite.
+
+En cas de résistance : usage de la force proportionné et justifié (voir section: Règlement RPD).
+
+Une personne peut être interpellée uniquement si l’un des cas suivants est réuni :
+
+Surpris en flagrant délit ;
+
+Désigné par un témoin fiable comme auteur ou complice ;
+
+Visé par un mandat valide ou un ordre hiérarchique.
+
+⚠️ Une contravention seule ne justifie pas une arrestation.
+
+L’individu est menotté et sécurisé. 
+
+Toute résistance doit être contenue avec un usage de la force proportionné et justifié.
+
+2. Transfert au Poste de Police (PDP)
+
+Après interpellation, le suspect est escorté vers le PDP sous surveillance constante.
+
+Règles pendant le transport :
+
+Le suspect doit rester menotté
+
+Aucune violence gratuite
+
+Aucun dialogue insultant
+
+Présence d’au moins 1 agent en escorte
+
+Après interpellation, le suspect est escorté au PDP pour le début officiel de la procédure.
+
+3. Lecture des droits Miranda (obligatoire)
+
+Avant toute fouille ou amende, les droits Miranda doivent être lus de manière claire
+
+Réponses possibles :
+
+✅ Oui : demander ensuite :
+
+« Souhaitez-vous exercer l’un de vos droits : avocat, silence, soins ou nourriture ? »
+
+❌ Non : répéter calmement jusqu’à 3 fois. Après cela, poursuivre en demandant :
+
+« Souhaitez-vous la présence d’un avocat ou une assistance médicale ? »
+
+La non-lecture constitue un vice de procédure.
+
+4. Fouille réglementaire
+
+La fouille est strictement réglementée et s’effectue dans l’enceinte du PDP.
+
+Position obligatoire :
+
+Suspect dos au mur
+
+Aucune arme (l'étale) sortie par l’agent sauf danger immédiat. Taser en safe (Touche "r" avec le tazer dans les mains).
+
+Phrase réglementaire RP :
+
+« Si vous vous retournez ou bougez sans instruction, vous écoperez d’une amende pour refus d’obtempérer. Toute récidive sera cumulable. »
+
+Étapes de fouille :
+
+Fouille complète: vérification présence d’arme
+
+Retrait objets prohibés
+
+Cas d’arme détectée :
+
+Question RP :
+
+« Possédez-vous une licence pour cette arme ? »
+
+Si licence valide :
+
+La possession peut être tolérée
+
+Si aucune licence : saisie définitive
+
+(HRP: Les armes sont retirées dans tous les cas durant la garde à vue.)
+
+⚠️ Toute utilisation abusive ou meurtrière d’une arme annule la licence.
+
+5. Droits du suspect
+
+Si le M.E.C demande :
+
+ Un avocat
+
+/advert Un avocat est demandé au PDP dans un délai de 3 minutes.
+
+Présence obligatoire avant tout interrogatoire ou amende
+
+S’il ne se présente pas sous 3 minutes, son droit devient caduc
+
+Soins médicaux
+
+/advert Un médecin est demandé au PDP dans un délai de 3 minutes.
+
+Si aucun médecin ne vient :
+/me Effectue les premiers soins
+
+Nourriture
+
+/advert Un cuisinier est demandé au PDP dans un délai de 3 minutes.
+
+Si indisponible :
+
+envoyer un collègue
+
+ou accompagner le suspect pour manger
+
+⚠️ Tout intervenant doit passer par le hall visiteur uniquement. Toute personne passant par le parking sera refusée dans le PDP.
+
+6. Présence d’un juge en ville
+
+Si un juge est présent :
+Le M.E.C doit lui être présenté avant toute sanction.
+
+L’agent doit :
+
+Escorter calmement le suspect
+
+Présenter les faits, preuves et comportement
+
+Sécuriser la salle d’audience
+
+La décision du juge est irrévocable. Elle peut mener à :
+
+libération
+
+amende
+
+détention
+
+7. VICES DE PROCÉDURE
+
+Tout manquement entraîne la libération immédiate du M.E.C.
+
+Sont considérés comme vices :
+
+Arrestation sans délit ou crime avéré
+
+Non-lecture des droits Miranda
+
+Refus de relire les droits après incompréhension (sauf si excès du M.E.C) 
+
+Violence, intimidation ou humiliation
+
+Surveillance d’un échange avocat/client
+
+Amendement sans avocat si demandé
+
+Enfermement abusif avocat/client
+
+Non-respect du délai pour les droits du M.E.C
+
+8. Exemple complet de procédure RP
+
+Interpellation
+
+« Police, vous êtes interpellé pour suspicion de vol. »
+
+Transport PDP
+
+Lecture Miranda
+
+Question droits
+
+Fouille
+
+Appel avocat si demandé
+
+Amende
+
+Cellule: arrest stick
+
+9. Amendes et incarcération
+
+Le suspect doit payer ses amendes :
+
+✅ Paiement → réduction de 30% de prison
+
+❌ Refus → temps de prison maximal
+
+Une fois les amendes traitées :
+
+Incarcération en cellule
+
+Utilisation de l’arrest stick
+
+Rappel Final
+
+Le respect strict de ce guide garantit une justice cohérente et équitable. Tout manquement pourra entraîner des sanctions (en rp) ou administratives.
+
