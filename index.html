@@ -473,12 +473,20 @@
         const themeSwitch = document.getElementById('checkbox');
         const body = document.body;
 
-        const currentTheme = localStorage.getItem('theme');
+        // Check localStorage for theme preference
+        let currentTheme = localStorage.getItem('theme');
+
         if (currentTheme) {
+            // If a theme is saved, apply it
             body.classList.add(currentTheme);
             if (currentTheme === 'dark-mode') {
                 themeSwitch.checked = true;
             }
+        } else {
+            // If no theme is saved (first visit), default to dark mode
+            body.classList.add('dark-mode');
+            themeSwitch.checked = true;
+            localStorage.setItem('theme', 'dark-mode'); // Save dark mode as default for future visits
         }
 
         themeSwitch.addEventListener('change', function() {
@@ -487,7 +495,7 @@
                 localStorage.setItem('theme', 'dark-mode');
             } else {
                 body.classList.remove('dark-mode');
-                localStorage.setItem('theme', '');
+                localStorage.setItem('theme', ''); // Remove dark mode preference
             }
         });
 
