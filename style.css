@@ -104,6 +104,31 @@ body.menu-open #page-wrapper {
 /* --- END HIERARCHY SECTION STYLES --- */
 
 
+/* Modal Image Fullscreen */
+#imageModal .modal-content,
+#armesModal .modal-content {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#imageModal .modal-header,
+#armesModal .modal-header {
+    border-bottom: none;
+}
+
+.modal-backdrop {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-backdrop.fade {
+    opacity: 0;
+}
+.modal-backdrop.show {
+    opacity: 1;
+}
+
 /* Pyramid Structure */
 .pyramid-container {
     display: flex;
@@ -300,7 +325,7 @@ body.dark-mode a:hover { color: #9ece6a; }
 body.dark-mode .blockquote { border-left: .25rem solid #7aa2f7; }
 body.dark-mode .modal-backdrop { background-color: rgba(26, 27, 38, 0.8); }
 body.dark-mode .modal-header { border-bottom: none; }
-body.dark-mode .modal-content .btn-close { filter: invert(1); }
+body.dark-mode .modal-content .btn-close:not(.btn-close-white) { filter: invert(1); }
 body.dark-mode .form-control { background-color: #24283b; color: #a9b1d6; border-color: #414868; }
 body.dark-mode .form-control:focus { background-color: #24283b; color: #a9b1d6; border-color: #7aa2f7; box-shadow: 0 0 0 0.25rem rgba(122, 162, 247, 0.25); }
 body.dark-mode .form-label { color: #c0caf5; }
