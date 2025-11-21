@@ -230,6 +230,7 @@ body.menu-open #side-menu {
 #side-menu a:hover {
     color: #0056b3;
     background-color: #eaf5ff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 15px rgba(0, 123, 255, 0.3);
 }
 
 #side-menu .menu-item.active {
@@ -287,6 +288,11 @@ body.dark-mode .pyramid-level:nth-child(3) { background-color: #7dcfff; }
 body.dark-mode .pyramid-level:nth-child(4) { background-color: #7aa2f7; }
 body.dark-mode .pyramid-level:nth-child(5) { background-color: #9ece6a; }
 body.dark-mode .footer { background-color: #1e2029; color: #a9b1d6; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); }
+
+.btn-primary:hover {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 15px rgba(0, 123, 255, 0.3);
+}
+
 body.dark-mode .btn-primary { background-color: #414868; border-color: #7aa2f7; color: #c0caf5; }
 body.dark-mode .btn-primary:hover { background-color: #7aa2f7; border-color: #7aa2f7; color: #1a1b26; box-shadow: 0 0 5px rgba(122, 162, 247, 0.9), 0 0 15px rgba(122, 162, 247, 0.7), 0 0 30px rgba(122, 162, 247, 0.5); }
 body.dark-mode a { color: #7aa2f7; }
@@ -301,7 +307,11 @@ body.dark-mode .form-label { color: #c0caf5; }
 body.dark-mode .list-group-item { background-color: #24283b; border-color: #414868; color: #a9b1d6; }
 body.dark-mode #side-menu { background-color: #1e2029; box-shadow: 2px 0 5px rgba(0,0,0,0.7); }
 body.dark-mode #side-menu a { color: #a9b1d6; }
-body.dark-mode #side-menu a:hover { color: #c0caf5; background-color: #414868; }
+body.dark-mode #side-menu a:hover {
+    color: #c0caf5;
+    background-color: #414868;
+    box-shadow: 0 0 5px rgba(122, 162, 247, 0.9), 0 0 15px rgba(122, 162, 247, 0.7), 0 0 30px rgba(122, 162, 247, 0.5);
+}
 body.dark-mode #side-menu .menu-item.active { background-color: #7aa2f7; color: #1a1b26; }
 body.dark-mode .content-section { background-color: #1e2029; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 
@@ -312,7 +322,7 @@ body.dark-mode #hierarchie .nav-pills .nav-link {
 }
 
 body.dark-mode #hierarchie .nav-pills .nav-link:hover {
-    box-shadow: 0 0 5px rgba(122, 162, 247, 0.7), 0 0 15px rgba(122, 162, 247, 0.5);
+    box-shadow: 0 0 5px rgba(122, 162, 247, 0.9), 0 0 15px rgba(122, 162, 247, 0.7), 0 0 30px rgba(122, 162, 247, 0.5);
 }
 
 body.dark-mode #hierarchie .nav-pills .nav-link.active {
