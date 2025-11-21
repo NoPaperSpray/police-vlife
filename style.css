@@ -388,12 +388,12 @@ body.dark-mode .btn-primary {
 }
 
 body.dark-mode .btn-primary:hover {
-    background-color: #9ece6a;
-    border-color: #9ece6a;
+    background-color: #7aa2f7;
+    border-color: #7aa2f7;
     color: #1a1b26; /* Dark text for contrast on green background */
-    box-shadow: 0 0 5px rgba(158, 206, 106, 0.9),
-                0 0 15px rgba(158, 206, 106, 0.7),
-                0 0 30px rgba(158, 206, 106, 0.5);
+    box-shadow: 0 0 5px rgba(122, 162, 247, 0.9),
+                0 0 15px rgba(122, 162, 247, 0.7),
+                0 0 30px rgba(122, 162, 247, 0.5);
 }
 
 body.dark-mode a {
@@ -509,4 +509,127 @@ img:hover {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.8),
                 0 0 15px rgba(0, 123, 255, 0.6),
                 0 0 30px rgba(0, 123, 255, 0.4);
+}
+
+/* Hide original tab navigation */
+.nav-tabs {
+    display: none;
+}
+
+/* Sidebar Menu */
+#main-container {
+    position: relative;
+    transition: padding-left 0.5s;
+}
+
+body.menu-open #main-container {
+    padding-left: 250px; /* Width of the side-menu */
+}
+
+#side-menu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    background-color: #f0f4f8; /* Light background for light mode */
+    overflow-x: hidden;
+    padding-top: 120px; /* Increased padding to be below the header */
+    transition: 0.5s;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+body.menu-open #side-menu {
+    left: 0; /* Shown when menu is open */
+}
+
+#side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #495057; /* Dark text for light background */
+    display: block;
+    transition: 0.3s;
+}
+
+#side-menu a:hover {
+    color: #0056b3; /* Primary blue on hover */
+    background-color: #eaf5ff;
+}
+
+#side-menu .menu-item.active {
+    color: #fff;
+    background-color: #007bff;
+}
+
+#menu-toggle {
+    position: fixed;
+    top: 35px; /* Adjusted to be vertically centered in the header */
+    left: 20px; /* Initial position */
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    background: none;
+    border: none;
+    color: #fff; /* White color for visibility on dark header */
+    padding: 0 15px;
+    border-radius: 5px;
+    transition: left 0.5s;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+body.menu-open #menu-toggle {
+    left: 270px; /* 250px (menu width) + 20px (initial left) */
+}
+
+#main-content {
+    transition: margin-left .5s;
+    padding: 16px;
+    /* margin-left: 0;  This will be controlled by body.menu-open */
+}
+
+body.menu-open #main-content {
+    margin-left: 250px; /* Width of the side-menu */
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* --- Dark Mode Overrides --- */
+
+body.dark-mode #side-menu {
+    background-color: #1e2029; /* Tokyo Night background */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.7);
+}
+
+body.dark-mode #side-menu a {
+    color: #a9b1d6; /* Light text for dark background */
+}
+
+body.dark-mode #side-menu a:hover {
+    color: #c0caf5;
+    background-color: #414868; /* Hover color */
+}
+
+body.dark-mode #side-menu .menu-item.active {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+}
+
+body.dark-mode .content-section {
+    background-color: #1e2029;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
