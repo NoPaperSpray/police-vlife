@@ -321,7 +321,7 @@ body.menu-open #side-menu {
     display: flex; /* Use flexbox for alignment */
     align-items: center;
     border-radius: 8px; /* Rounded corners */
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
     font-weight: 500;
 }
 
@@ -337,6 +337,8 @@ body.menu-open #side-menu {
 #side-menu a.menu-item:hover {
     background: rgba(0, 123, 255, 0.1); /* Subtle blue highlight */
     color: #0056b3;
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); /* Subtle glow on hover */
 }
 
 #side-menu a.menu-item:hover .icon {
@@ -533,6 +535,8 @@ body.dark-mode #side-menu a.menu-item .icon {
 body.dark-mode #side-menu a.menu-item:hover {
     background: rgba(59, 130, 246, 0.1); /* Subtle blue highlight */
     color: #E2E8F0;
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2); /* Subtle glow on hover */
 }
 
 body.dark-mode #side-menu a.menu-item:hover .icon {
