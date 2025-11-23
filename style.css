@@ -287,60 +287,141 @@ input:checked + .slider:before { transform: translateX(26px); }
 /* Sidebar Menu */
 #side-menu {
     height: 100%;
-    width: 250px;
+    width: 280px; /* A bit wider for better spacing */
     position: fixed;
     z-index: 1000;
     top: 0;
-    left: -250px;
-    background-color: #f0f4f8;
-    overflow-x: hidden;
+    left: -280px; /* Match the new width */
+    background-color: #f8f9fa;
+    overflow-y: auto; /* Allow scrolling for long menus */
     padding-top: 20px;
-    transition: 0.5s;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
 }
 
 body.menu-open #side-menu {
     left: 0;
 }
 
-#side-menu a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #495057;
-    display: block;
-    transition: 0.3s;
+#side-menu .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#side-menu a:hover {
+#side-menu .menu-list li {
+    margin: 5px 10px;
+}
+
+#side-menu a.menu-item {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #495057;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+#side-menu a.menu-item .icon {
+    margin-right: 15px;
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.5; /* Thinner icons */
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+#side-menu a.menu-item:hover {
+    background: rgba(0, 123, 255, 0.1); /* Subtle blue highlight */
     color: #0056b3;
-    background-color: #eaf5ff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 15px rgba(0, 123, 255, 0.3);
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); /* Subtle glow on hover */
+}
+
+#side-menu a.menu-item:hover .icon {
+    color: #0056b3;
 }
 
 #side-menu .menu-item.active {
     color: #fff;
-    background-color: #007bff;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+#side-menu .menu-item.active .icon {
+    color: #fff;
+}
+
+/* Submenu Styling */
+#side-menu .submenu {
+    list-style: none;
+    padding-left: 25px; /* Indent submenu items */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    margin-top: 5px;
+}
+
+#side-menu .has-submenu.open .submenu {
+    max-height: 500px; /* Adjust as needed */
+    transition: max-height 0.5s ease-in;
+}
+
+#side-menu .submenu a.menu-item {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+#side-menu .submenu a.menu-item .icon {
+    width: 18px;
+    height: 18px;
+}
+
+#side-menu .submenu-toggle {
+    cursor: pointer;
+    position: relative;
+}
+
+#side-menu .submenu-toggle .dropdown-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#side-menu .has-submenu.open .submenu-toggle .dropdown-icon {
+    transform: translateY(-50%) rotate(180deg);
 }
 
 #menu-toggle {
     position: fixed;
-    top: 35px;
+    top: 25px; /* Adjusted position */
     left: 20px;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
     z-index: 1001;
-    background: none;
+    background: rgba(0,0,0,0.2);
     border: none;
     color: #fff;
-    padding: 0 15px;
-    border-radius: 5px;
-    transition: left 0.5s;
+    padding: 5px 12px; /* Give it some padding */
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+
+#menu-toggle:hover {
+    background: rgba(0,0,0,0.4);
 }
 
 body.menu-open #menu-toggle {
-    left: 270px;
+    left: 300px; /* Adjusted for new menu width + margin */
 }
 
 /* Content Sections */
@@ -439,20 +520,37 @@ body.dark-mode .footer {
 
 /* MENU LATERAL */
 body.dark-mode #side-menu {
-    background: #0B152B;
+    background: #0F172A; /* Dark blue-gray */
+    box-shadow: 4px 0 20px rgba(0,0,0,0.5);
 }
 
-body.dark-mode #side-menu a {
-    color: #E6EEF9;
+body.dark-mode #side-menu a.menu-item {
+    color: #94a3b8; /* Lighter text for contrast */
 }
 
-body.dark-mode #side-menu a:hover {
-    background: #1E5B9F;
+body.dark-mode #side-menu a.menu-item .icon {
+    color: #64748b; /* Muted icon color */
+}
+
+body.dark-mode #side-menu a.menu-item:hover {
+    background: rgba(59, 130, 246, 0.1); /* Subtle blue highlight */
+    color: #E2E8F0;
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2); /* Subtle glow on hover */
+}
+
+body.dark-mode #side-menu a.menu-item:hover .icon {
+    color: #94A3B8;
 }
 
 /* ACTIVE MENU */
 body.dark-mode #side-menu .menu-item.active {
-    background: #2F76C5;
+    background: linear-gradient(90deg, #3B82F6, #2563EB);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+body.dark-mode #side-menu .menu-item.active .icon {
     color: #ffffff;
 }
 
