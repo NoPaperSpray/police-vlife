@@ -335,7 +335,7 @@ body.menu-open #side-menu {
 }
 
 #side-menu a.menu-item:hover {
-    background-color: #e9ecef;
+    background: rgba(0, 123, 255, 0.1); /* Subtle blue highlight */
     color: #0056b3;
 }
 
@@ -531,7 +531,7 @@ body.dark-mode #side-menu a.menu-item .icon {
 }
 
 body.dark-mode #side-menu a.menu-item:hover {
-    background: #1E293B; /* Slightly lighter on hover */
+    background: rgba(59, 130, 246, 0.1); /* Subtle blue highlight */
     color: #E2E8F0;
 }
 
