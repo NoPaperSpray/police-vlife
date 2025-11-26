@@ -301,18 +301,6 @@
                 }
             });
 
-            // Set current date and time for Miranda rights
-            const datetimeSpan = document.getElementById('current-datetime');
-            if (datetimeSpan) {
-                function updateTime() {
-                    const now = new Date();
-                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-                    datetimeSpan.textContent = now.toLocaleDateString('fr-FR', options);
-                }
-                updateTime();
-                setInterval(updateTime, 1000);
-            }
-
             // Welcome Modal
             const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
             if (!localStorage.getItem('visited')) {
@@ -322,97 +310,61 @@
 
             // Image Modal close on click outside
             const imageModal = document.getElementById('imageModal');
-            imageModal.addEventListener('click', function (event) {
-                const modalImage = imageModal.querySelector('img');
-                const modalHeader = imageModal.querySelector('.modal-header');
+            if (imageModal) {
+                imageModal.addEventListener('click', function (event) {
+                    const modalImage = imageModal.querySelector('img');
+                    const modalHeader = imageModal.querySelector('.modal-header');
 
-                // If the click is not on the image and not inside the header
-                if (event.target !== modalImage && !modalHeader.contains(event.target)) {
-                    const modal = bootstrap.Modal.getInstance(imageModal);
-                    modal.hide();
-                }
-            });
+                    // If the click is not on the image and not inside the header
+                    if (event.target !== modalImage && !modalHeader.contains(event.target)) {
+                        const modal = bootstrap.Modal.getInstance(imageModal);
+                        modal.hide();
+                    }
+                });
+            }
 
             const armesModal = document.getElementById('armesModal');
-            armesModal.addEventListener('click', function (event) {
-                const modalImage = armesModal.querySelector('img');
-                const modalHeader = armesModal.querySelector('.modal-header');
+            if (armesModal) {
+                armesModal.addEventListener('click', function (event) {
+                    const modalImage = armesModal.querySelector('img');
+                    const modalHeader = armesModal.querySelector('.modal-header');
 
-                // If the click is not on the image and not inside the header
-                if (event.target !== modalImage && !modalHeader.contains(event.target)) {
-                    const modal = bootstrap.Modal.getInstance(armesModal);
-                    modal.hide();
+                    // If the click is not on the image and not inside the header
+                    if (event.target !== modalImage && !modalHeader.contains(event.target)) {
+                        const modal = bootstrap.Modal.getInstance(armesModal);
+                        modal.hide();
+                    }
+                });
+            }
+
+            // Function to activate a section and update menu items
+            function activateSection(targetId) {
+                const contentSections = document.querySelectorAll('.content-section');
+                const menuItems = document.querySelectorAll('.menu-item');
+
+                // Hide all content sections
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Show the target content section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
                 }
-            });
 
-            // Radio call customization
-            const radioGradeInput = document.getElementById('radio-grade');
-            const radioNomInput = document.getElementById('radio-nom');
-            const radioUniteInput = document.getElementById('radio-unite');
-
-            const radioGradeSpans = document.querySelectorAll('.radio-grade');
-            const radioNomSpans = document.querySelectorAll('.radio-nom');
-            const radioUniteSpans = document.querySelectorAll('.radio-unite');
-
-            // Load saved values from localStorage
-            if (localStorage.getItem('radio-grade')) {
-                radioGradeInput.value = localStorage.getItem('radio-grade');
+                // Update active menu item
+                menuItems.forEach(menuItem => {
+                    menuItem.classList.remove('active');
+                    if (menuItem.getAttribute('data-target') === targetId) {
+                        menuItem.classList.add('active');
+                    }
+                });
             }
-            if (localStorage.getItem('radio-nom')) {
-                radioNomInput.value = localStorage.getItem('radio-nom');
-            }
-            if (localStorage.getItem('radio-unite')) {
-                radioUniteInput.value = localStorage.getItem('radio-unite');
-            }
-
-            function updateRadioCalls() {
-                const grade = radioGradeInput.value;
-                const nom = radioNomInput.value;
-                const unite = radioUniteInput.value;
-
-                radioGradeSpans.forEach(span => span.textContent = grade);
-                radioNomSpans.forEach(span => span.textContent = nom);
-                radioUniteSpans.forEach(span => span.textContent = unite);
-
-                // Save values to localStorage
-                localStorage.setItem('radio-grade', grade);
-                localStorage.setItem('radio-nom', nom);
-                localStorage.setItem('radio-unite', unite);
-            }
-
-            // Initial update to display saved values
-            if(radioGradeInput) {
-                updateRadioCalls();
-                radioGradeInput.addEventListener('input', updateRadioCalls);
-                radioNomInput.addEventListener('input', updateRadioCalls);
-                radioUniteInput.addEventListener('input', updateRadioCalls);
-            }
-
-
-            // Pyramid hover script
-            const pyramidLevels = document.querySelectorAll('.pyramid-level');
-            pyramidLevels.forEach(level => {
-                const details = level.querySelector('.grade-details');
-                if (details) {
-                    level.addEventListener('mouseenter', () => {
-                        details.style.opacity = '1';
-                        details.style.visibility = 'visible';
-                    });
-                    level.addEventListener('mouseleave', () => {
-                        details.style.opacity = '0';
-                        details.style.visibility = 'hidden';
-                    });
-                    level.addEventListener('mousemove', e => {
-                        details.style.left = `${e.clientX + 15}px`;
-                        details.style.top = `${e.clientY + 15}px`;
-                    });
-                }
-            });
 
             const menuToggle = document.getElementById('menu-toggle');
             const submenuToggles = document.querySelectorAll('.submenu-toggle');
             const menuItems = document.querySelectorAll('.menu-item');
-            const contentSections = document.querySelectorAll('.content-section');
 
             menuToggle.addEventListener('click', function() {
                 document.body.classList.toggle('menu-open');
@@ -431,27 +383,9 @@
 
                     if(targetId){
                         e.preventDefault();
-                        // If the item is not a submenu toggle, handle content switching
                         if (!this.classList.contains('submenu-toggle')) {
+                            activateSection(targetId);
                             
-                            // Hide all content sections
-                            contentSections.forEach(section => {
-                                section.classList.remove('active');
-                            });
-
-                            // Show the target content section
-                            const targetSection = document.getElementById(targetId);
-                            if (targetSection) {
-                                targetSection.classList.add('active');
-                            }
-
-                            // Update active menu item
-                            menuItems.forEach(menuItem => {
-                                menuItem.classList.remove('active');
-                            });
-                            this.classList.add('active');
-                            
-                            // Close the menu on item click (optional, good for mobile)
                             if (window.innerWidth <= 768) {
                                 document.body.classList.remove('menu-open');
                             }
@@ -460,25 +394,12 @@
                 });
             });
 
-            // Show section based on URL hash
+            // Initial section activation
             const hash = window.location.hash.substring(1);
-            if (hash) {
-                const targetSection = document.getElementById(hash);
-                if (targetSection) {
-                    contentSections.forEach(section => {
-                        section.classList.remove('active');
-                    });
-                    targetSection.classList.add('active');
-
-                    // Update active menu item
-                    menuItems.forEach(menuItem => {
-                        menuItem.classList.remove('active');
-                    });
-                    const activeMenuItem = document.querySelector(`[data-target="${hash}"]`);
-                    if(activeMenuItem) {
-                        activeMenuItem.classList.add('active');
-                    }
-                }
+            if (hash && document.getElementById(hash)) {
+                activateSection(hash);
+            } else {
+                activateSection('traffic-unit'); // Default section for this page
             }
         });
     </script>
