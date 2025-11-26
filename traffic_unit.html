@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlife Police Department</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <button id="menu-toggle">☰</button>
+    <nav id="side-menu">
+        <ul class="menu-list">
+            <li>
+                <a href="index.html" class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-book"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
+                    <span>Règlement RPD</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#hierarchie" class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-sitemap"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 15l6 6" /><path d="M21 15l-6 6" /><path d="M9 15v-4a3 3 0 0 1 3 -3h0a3 3 0 0 1 3 3v4" /><path d="M12 3l0 5" /><path d="M5.636 5.636l1.414 1.414" /><path d="M18.364 5.636l-1.414 1.414" /></svg>
+                    <span>Structure Hiérarchique</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#uniformes" class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-hanger"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.004 6.004l6.002 6.002a2.002 2.002 0 1 1 -2.83 2.83l-5.176 -5.176v-3.66h-1v3.66l-5.176 5.175a2.002 2.002 0 1 1 -2.83 -2.83l6.002 -6.002a3.002 3.002 0 0 1 4.242 0z" /></svg>
+                    <span>Uniformes et Armes</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#radio" class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-radio"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3l-9.389 9.389a3.515 3.515 0 0 0 0 4.97l4.97 4.97a3.515 3.515 0 0 0 4.97 0l9.389 -9.389" /><path d="M12 12l-6.5 -6.5" /><path d="M7.5 16.5l-1 -1" /><path d="M18 6l-1 -1" /><path d="M20 8l-1.5 -1.5" /><path d="M3 11.5l1.5 -1.5" /><path d="M11 3.5l-1.5 1.5" /></svg>
+                    <span>Code Radio</span>
+                </a>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="menu-item submenu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg>
+                    <span>Procédures</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-down dropdown-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="index.html#procedures" class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-gavel"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" /><path d="M6 9l4 4" /><path d="M13 10l-4 -4" /><path d="M4 20l3.5 -3.5" /><path d="M15.5 11.5l-5 5" /><path d="M10 5l-7 7" /><path d="M21 14l-7 7" /></svg>
+                            <span>Procédures Judiciaires</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#miranda" class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21.5a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" /><path d="M9 12l2 2l4 -4" /></svg>
+                            <span>Droit Miranda</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#balisage" class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-cone-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 7m-7 0a7 3 0 1 0 14 0a7 3 0 1 0 -14 0" /><path d="M5 7v10" /><path d="M19 7v10" /><path d="M5 17a7 3 0 1 0 14 0a7 3 0 1 0 -14 0" /></svg>
+                            <span>Balisage et Sécurité</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-submenu open menu-section-separator">
+                <a href="#" class="menu-item submenu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-car"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" /></svg>
+                    <span>Traffic Unit</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-down dropdown-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#" class="menu-item active" data-target="traffic-unit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg>
+                            <span>Présentation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-target="formation-pit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-road"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 19l4 -14" /><path d="M16 5l4 14" /><path d="M12 8v-2" /><path d="M12 13v-2" /><path d="M12 18v-2" /></svg>
+                            <span>Formation PIT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-target="mots-vocabulaire">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-book"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
+                            <span>Mots Vocabulaire</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="page-wrapper">
+        <header class="header">
+            <div class="els-container">
+                <div class="light red-1"></div>
+                <div class="light blue-1"></div>
+                <div class="light red-2"></div>
+                <div class="light blue-2"></div>
+            </div>
+            <div class="header-content">
+                <img src="media/logo/tu.png" alt="RPD Logo" class="logo">
+                <h1>Vlife Police Department - Traffic Unit</h1>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </header>
+
+        <div id="main-container">
+            <div id="main-content" class="container mt-4">
+                <div class="content-section active" id="traffic-unit">
+                    <h2 class="mt-3">Traffic Unit</h2>
+                    <p>
+                        La Traffic Unit est une unité spécialisée dans le contrôle routier, la sécurisation des axes principaux et l'intervention rapide lors de poursuites routières. Elle joue un rôle clé dans la lutte contre les comportements dangereux et la protection des citoyens.
+                    </p>
+
+                        <h4>Missions Principales</h4>
+                        <ul>
+                            <li>Contrôles de vitesse et d'alcoolémie.</li>
+                            <li>Interventions lors de conduites dangereuses.</li>
+                            <li>Gestion et sécurisation des accidents de la route.</li>
+                            <li>Engagement et gestion de courses-poursuites routières.</li>
+                            <li>Interception de véhicules en fuite.</li>
+                            <li>Mise en place de barrages et opérations de contrôle routier.</li>
+                            <li>Escortes sécurisées de convois sensibles.</li>
+                            <li>Régulation du trafic en situation d’urgence.</li>
+                        </ul>
+                </div>
+                <div class="content-section" id="formation-pit">
+                    <h2 class="mt-3">Guide de la Manœuvre PIT (Precision Immobilization Technique)</h2>
+                
+                    <h4>1. Définition et Objectif</h4>
+                    <p>La manœuvre PIT est une technique de poursuite visant à forcer un véhicule en fuite à faire un tête-à-queue pour mettre fin à la poursuite de manière contrôlée. L'objectif est de réduire les risques pour le public et les forces de l'ordre en stoppant le véhicule dans une zone sécurisée.</p>
+                
+                    <h4>2. Conditions d'Autorisation</h4>
+                    <p>L'usage de la manœuvre PIT est réglementé et ne doit être envisagé que lorsque les conditions suivantes sont réunies :</p>
+                    <ul>
+                        <li><strong>Danger imminent :</strong> Le conducteur en fuite représente un danger grave et immédiat pour la vie d'autrui.</li>
+                        <li><strong>Autorisation supérieure HG Traffic Unit :</strong> L'officier doit, dans la mesure du possible, obtenir l'autorisation d'un superviseur avant de tenter la manœuvre.</li>
+                        <li><strong>Conditions de circulation :</strong> La circulation doit être faible et la zone d'intervention dégagée de piétons ou d'obstacles majeurs.</li>
+                        <li><strong>Vitesse adaptée :</strong> La vitesse des deux véhicules ne doit pas être excessive. La manœuvre est généralement plus sûre à des vitesses modérées (en dessous de 160 km/h).</li>
+                        <li><strong>Restrictions spécifiques – Manœuvre PIT</strong>
+                            <ul>
+                                <li>Motos :
+                                    La manœuvre PIT est interdite sur les deux-roues, sauf à très faible vitesse (inférieure à 30 km/h) et uniquement si la situation le justifie pleinement.</li>
+                                <li>Lamborghini de police :
+                                    Les véhicules Lamborghini de police ont INTERDICTION formelle d’effectuer une manœuvre PIT en course-poursuite, sauf :
+                                    <ul>
+                                        <li>autorisation expresse d’un supérieur haut gradé de la Traffic Unit</li>
+                                        <li>ou en cas de danger extrême et immédiat pour la population ou les forces de l’ordre.</li>
+                                    </ul>
+                                </li>
+                                <li>Tout non-respect de ces règles pourra entraîner des sanctions et/ou administratives.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                
+                    <h4>3. Procédure d'Exécution</h4>
+                    <p>La manœuvre doit être exécutée avec précision et sang-froid.</p>
+                    <ol>
+                        <li><strong>Communication Radio :</strong>
+                            <ul>
+                                <li>Annoncez clairement votre intention d'effectuer une manœuvre PIT à la radio.</li>
+                                <li>Exemple : "Central, Unité Adam-01. Je m'apprête à tenter une manœuvre PIT sur le véhicule suspect. Position : [votre position]. Vitesse : [vitesse actuelle]."</li>
+                            </ul>
+                        </li>
+                        <li><strong>Positionnement :</strong>
+                            <ul>
+                                <li>Alignez votre pare-chocs avant avec le panneau de custode arrière du véhicule suspect.</li>
+                                <li>Maintenez une distance latérale minimale, sans contact initial.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Contact :</strong>
+                            <ul>
+                                <li>Accélérez légèrement pour dépasser la vitesse du suspect.</li>
+                                <li>Tournez doucement votre volant de 10 à 15 degrés vers le véhicule suspect pour établir le contact. Le point d'impact idéal est juste derrière la roue arrière du véhicule cible.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Poussée Contrôlée :</strong>
+                            <ul>
+                                <li>Une fois le contact établi, continuez à accélérer et à tourner dans la même direction pour pousser l'arrière du véhicule suspect.</li>
+                                <li>Le véhicule suspect perdra de l'adhérence et commencera à pivoter.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Accompagnement et Sécurisation :</strong>
+                            <ul>
+                                <li>Soyez prêt à contre-braquer pour stabiliser votre propre véhicule.</li>
+                                <li>Accompagnez le mouvement du véhicule suspect jusqu'à son immobilisation complète.</li>
+                                <li>Une fois le véhicule arrêté, procédez immédiatement à l'interpellation des occupants, en utilisant les techniques de couverture et d'approche appropriées.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                
+                    <h4>4. Risques et Points de Vigilance</h4>
+                    <ul>
+                        <li><strong>Perte de contrôle :</strong> Une vitesse excessive ou un angle de contact incorrect peut entraîner une perte de contrôle des deux véhicules.</li>
+                        <li><strong>Environnement :</strong> Soyez toujours conscient de votre environnement. Un obstacle imprévu (poteau, fossé, autre véhicule) peut rendre la manœuvre extrêmement dangereuse.</li>
+                        <li><strong>Post-Manœuvre :</strong> Le véhicule suspect peut encore représenter une menace. Restez vigilant lors de l'approche.</li>
+                    </ul>
+                </div>
+                <div class="content-section" id="mots-vocabulaire">
+                    <h2 class="mt-3">Mots Vocabulaire</h2>
+                    <ul>
+                        <li><strong>PIT (Precision Immobilization Technique) :</strong> Une technique de poursuite visant à forcer un véhicule en fuite à faire un tête-à-queue pour mettre fin à la poursuite de manière contrôlée.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Welcome Modal -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="welcomeModalLabel"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shield-check me-2" viewBox="0 0 16 16">
+  <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.61.61 0 0 0 .1-.025c.076-.023.174-.06.294-.118.24-.113.545-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.953-.324-1.89-.623-2.837-.856C9.822 1.272 8.932 1 8 1s-1.822.272-2.662.59zM10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+</svg>Bienvenue sur le portail du RPD !</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Toutes les informations et procédures du Vlife Police Department sont organisées dans le menu latéral.</p>
+        <p class="mb-0">Cliquez sur l'icône <strong class="menu-icon-highlight">☰</strong> en haut à gauche pour ouvrir le menu et naviguer entre les sections.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Compris !</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Code Radio</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="media/code_radio/coderadio.png" class="img-fluid" alt="Codes radio de la police">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Armes Modal -->
+<div class="modal fade" id="armesModal" tabindex="-1" aria-labelledby="armesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="armesModalLabel">Armes</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="media/uniforme_et_armes/arme_rpd.png" class="img-fluid" alt="Armes RPD">
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>&copy; 2025 Vlife | Rockford Police Department. RPD discord (partie la plus importante du règlement) et Mafouf Honorable (site + légère modification du règlement).</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeSwitch = document.getElementById('checkbox');
+            const body = document.body;
+
+            // Check localStorage for theme preference
+            let currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme) {
+                // If a theme is saved, apply it
+                body.classList.add(currentTheme);
+                if (currentTheme === 'dark-mode') {
+                    themeSwitch.checked = true;
+                }
+            } else {
+                // If no theme is saved (first visit), default to dark mode
+                body.classList.add('dark-mode');
+                themeSwitch.checked = true;
+                localStorage.setItem('theme', 'dark-mode'); // Save dark mode as default for future visits
+            }
+
+            themeSwitch.addEventListener('change', function() {
+                if(this.checked) {
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark-mode');
+                } else {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', ''); // Remove dark mode preference
+                }
+            });
+
+            // Set current date and time for Miranda rights
+            const datetimeSpan = document.getElementById('current-datetime');
+            if (datetimeSpan) {
+                function updateTime() {
+                    const now = new Date();
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+                    datetimeSpan.textContent = now.toLocaleDateString('fr-FR', options);
+                }
+                updateTime();
+                setInterval(updateTime, 1000);
+            }
+
+            // Welcome Modal
+            const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+            if (!localStorage.getItem('visited')) {
+                welcomeModal.show();
+                localStorage.setItem('visited', 'true');
+            }
+
+            // Image Modal close on click outside
+            const imageModal = document.getElementById('imageModal');
+            imageModal.addEventListener('click', function (event) {
+                const modalImage = imageModal.querySelector('img');
+                const modalHeader = imageModal.querySelector('.modal-header');
+
+                // If the click is not on the image and not inside the header
+                if (event.target !== modalImage && !modalHeader.contains(event.target)) {
+                    const modal = bootstrap.Modal.getInstance(imageModal);
+                    modal.hide();
+                }
+            });
+
+            const armesModal = document.getElementById('armesModal');
+            armesModal.addEventListener('click', function (event) {
+                const modalImage = armesModal.querySelector('img');
+                const modalHeader = armesModal.querySelector('.modal-header');
+
+                // If the click is not on the image and not inside the header
+                if (event.target !== modalImage && !modalHeader.contains(event.target)) {
+                    const modal = bootstrap.Modal.getInstance(armesModal);
+                    modal.hide();
+                }
+            });
+
+            // Radio call customization
+            const radioGradeInput = document.getElementById('radio-grade');
+            const radioNomInput = document.getElementById('radio-nom');
+            const radioUniteInput = document.getElementById('radio-unite');
+
+            const radioGradeSpans = document.querySelectorAll('.radio-grade');
+            const radioNomSpans = document.querySelectorAll('.radio-nom');
+            const radioUniteSpans = document.querySelectorAll('.radio-unite');
+
+            // Load saved values from localStorage
+            if (localStorage.getItem('radio-grade')) {
+                radioGradeInput.value = localStorage.getItem('radio-grade');
+            }
+            if (localStorage.getItem('radio-nom')) {
+                radioNomInput.value = localStorage.getItem('radio-nom');
+            }
+            if (localStorage.getItem('radio-unite')) {
+                radioUniteInput.value = localStorage.getItem('radio-unite');
+            }
+
+            function updateRadioCalls() {
+                const grade = radioGradeInput.value;
+                const nom = radioNomInput.value;
+                const unite = radioUniteInput.value;
+
+                radioGradeSpans.forEach(span => span.textContent = grade);
+                radioNomSpans.forEach(span => span.textContent = nom);
+                radioUniteSpans.forEach(span => span.textContent = unite);
+
+                // Save values to localStorage
+                localStorage.setItem('radio-grade', grade);
+                localStorage.setItem('radio-nom', nom);
+                localStorage.setItem('radio-unite', unite);
+            }
+
+            // Initial update to display saved values
+            if(radioGradeInput) {
+                updateRadioCalls();
+                radioGradeInput.addEventListener('input', updateRadioCalls);
+                radioNomInput.addEventListener('input', updateRadioCalls);
+                radioUniteInput.addEventListener('input', updateRadioCalls);
+            }
+
+
+            // Pyramid hover script
+            const pyramidLevels = document.querySelectorAll('.pyramid-level');
+            pyramidLevels.forEach(level => {
+                const details = level.querySelector('.grade-details');
+                if (details) {
+                    level.addEventListener('mouseenter', () => {
+                        details.style.opacity = '1';
+                        details.style.visibility = 'visible';
+                    });
+                    level.addEventListener('mouseleave', () => {
+                        details.style.opacity = '0';
+                        details.style.visibility = 'hidden';
+                    });
+                    level.addEventListener('mousemove', e => {
+                        details.style.left = `${e.clientX + 15}px`;
+                        details.style.top = `${e.clientY + 15}px`;
+                    });
+                }
+            });
+
+            const menuToggle = document.getElementById('menu-toggle');
+            const submenuToggles = document.querySelectorAll('.submenu-toggle');
+            const menuItems = document.querySelectorAll('.menu-item');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            menuToggle.addEventListener('click', function() {
+                document.body.classList.toggle('menu-open');
+            });
+
+            submenuToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('open');
+                });
+            });
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('data-target');
+
+                    if(targetId){
+                        e.preventDefault();
+                        // If the item is not a submenu toggle, handle content switching
+                        if (!this.classList.contains('submenu-toggle')) {
+                            
+                            // Hide all content sections
+                            contentSections.forEach(section => {
+                                section.classList.remove('active');
+                            });
+
+                            // Show the target content section
+                            const targetSection = document.getElementById(targetId);
+                            if (targetSection) {
+                                targetSection.classList.add('active');
+                            }
+
+                            // Update active menu item
+                            menuItems.forEach(menuItem => {
+                                menuItem.classList.remove('active');
+                            });
+                            this.classList.add('active');
+                            
+                            // Close the menu on item click (optional, good for mobile)
+                            if (window.innerWidth <= 768) {
+                                document.body.classList.remove('menu-open');
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Show section based on URL hash
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetSection = document.getElementById(hash);
+                if (targetSection) {
+                    contentSections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    targetSection.classList.add('active');
+
+                    // Update active menu item
+                    menuItems.forEach(menuItem => {
+                        menuItem.classList.remove('active');
+                    });
+                    const activeMenuItem = document.querySelector(`[data-target="${hash}"]`);
+                    if(activeMenuItem) {
+                        activeMenuItem.classList.add('active');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

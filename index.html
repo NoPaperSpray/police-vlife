@@ -63,6 +63,33 @@
                     </li>
                 </ul>
             </li>
+            <li class="has-submenu menu-section-separator">
+                <a href="#" class="menu-item submenu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-car"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" /></svg>
+                    <span>Traffic Unit</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-down dropdown-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="traffic_unit.html" class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg>
+                            <span>Présentation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="traffic_unit.html#formation-pit" class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-road"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 19l4 -14" /><path d="M16 5l4 14" /><path d="M12 8v-2" /><path d="M12 13v-2" /><path d="M12 18v-2" /></svg>
+                            <span>Formation PIT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="traffic_unit.html#mots-vocabulaire" class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-book"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
+                            <span>Mots Vocabulaire</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -651,50 +678,38 @@
             }
         });
 
+        // Function to activate a section and update menu items
+        function activateSection(targetId) {
+            const contentSections = document.querySelectorAll('.content-section');
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            // Hide all content sections
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the target content section
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Update active menu item
+            menuItems.forEach(menuItem => {
+                menuItem.classList.remove('active');
+                if (menuItem.getAttribute('data-target') === targetId) {
+                    menuItem.classList.add('active');
+                }
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.getElementById('menu-toggle');
-            const sideMenu = document.getElementById('side-menu');
-            const mainContent = document.getElementById('main-content');
-            const mainContainer = document.getElementById('main-container');
-            const menuItems = document.querySelectorAll('.menu-item');
-            const contentSections = document.querySelectorAll('.content-section');
             const submenuToggles = document.querySelectorAll('.submenu-toggle');
+            const menuItems = document.querySelectorAll('.menu-item');
 
             menuToggle.addEventListener('click', function() {
                 document.body.classList.toggle('menu-open');
-            });
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // If the item is not a submenu toggle, handle content switching
-                    if (!this.classList.contains('submenu-toggle')) {
-                        const targetId = this.getAttribute('data-target');
-
-                        // Hide all content sections
-                        contentSections.forEach(section => {
-                            section.classList.remove('active');
-                        });
-
-                        // Show the target content section
-                        const targetSection = document.getElementById(targetId);
-                        if (targetSection) {
-                            targetSection.classList.add('active');
-                        }
-
-                        // Update active menu item
-                        menuItems.forEach(menuItem => {
-                            menuItem.classList.remove('active');
-                        });
-                        this.classList.add('active');
-                        
-                        // Close the menu on item click (optional, good for mobile)
-                        if (window.innerWidth <= 768) {
-                            document.body.classList.remove('menu-open');
-                        }
-                    }
-                });
             });
 
             submenuToggles.forEach(toggle => {
@@ -704,16 +719,39 @@
                 });
             });
 
-            // Show the first section by default
-            if(contentSections.length > 0) {
-                contentSections[0].classList.add('active');
-            }
-            if(menuItems.length > 0) {
-                // Make sure we don't activate a submenu toggle by default
-                const firstItem = document.querySelector('.menu-item:not(.submenu-toggle)');
-                if(firstItem) {
-                    firstItem.classList.add('active');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('data-target');
+
+                    if(targetId){
+                        e.preventDefault();
+                        // If the item is not a submenu toggle, handle content switching
+                        if (!this.classList.contains('submenu-toggle')) {
+                            activateSection(targetId);
+                            
+                            // Close the menu on item click (optional, good for mobile)
+                            if (window.innerWidth <= 768) {
+                                document.body.classList.remove('menu-open');
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Initial section activation based on URL hash or default
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                // Try to activate section based on hash
+                const targetSection = document.getElementById(hash);
+                if (targetSection) {
+                    activateSection(hash);
+                } else {
+                    // If hash exists but doesn't match a section, fall back to default
+                    activateSection('reglement'); // Default to "Règlement RPD"
                 }
+            } else {
+                // No hash, activate default section
+                activateSection('reglement'); // Default to "Règlement RPD"
             }
         });
     </script>
