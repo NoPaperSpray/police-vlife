@@ -73,7 +73,6 @@ body.menu-open #page-wrapper {
     height: 3px;
     border-radius: 2px;
     opacity: 0;
-    filter: blur(3px);
 }
 .light.red-1, .light.red-2 {
     background-color: #ff0000;
