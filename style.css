@@ -629,6 +629,166 @@ body.dark-mode .blockquote {
     padding: 1rem;
 }
 
+/* Styles for KPI section in speed control */
+.kpi {
+    display: flex;
+    gap: 16px;
+    margin: 12px 0;
+    justify-content: center; /* Center the boxes */
+}
+
+.kpi div {
+    flex: 0 0 40%; /* Adjusted to a more balanced size */
+    padding: 12px;
+    border-radius: 8px;
+    background: #f7f7fb;
+    border: 1px solid #eee;
+    max-width: 380px; /* Re-introduced max-width to constrain size on larger screens */
+}
+
+/* Media query for smaller screens: stack .kpi boxes */
+@media (max-width: 768px) {
+    .kpi {
+        flex-direction: column;
+        align-items: center; /* Center items when stacked */
+    }
+    .kpi div {
+        width: 90%; /* Take up more width when stacked */
+        margin-bottom: 10px; /* Add some space between stacked boxes */
+    }
+}
+
+
+body.dark-mode .kpi div {
+    background: #1A2F55; /* Darker background for KPI div */
+    border: 1px solid #2F76C5; /* Blue border for dark mode */
+}
+
+.badge {
+    font-weight: 700;
+}
+
+.rules {
+    margin-top: 12px;
+}
+
+/* Interception Procedure List Styling */
+.interception-procedure {
+    counter-reset: interception-counter;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.interception-procedure li {
+    counter-increment: interception-counter;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-left: 50px; /* Space for the counter */
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.interception-procedure li:hover {
+    transform: translateX(5px);
+}
+
+.interception-procedure li::before {
+    content: counter(interception-counter);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Dark Mode for Interception Procedure */
+body.dark-mode .interception-procedure li::before {
+    background-color: #2F76C5;
+    box-shadow: 0 2px 8px rgba(47, 118, 197, 0.4);
+}
+
+.interception-procedure li:hover::before {
+    background-color: #0056b3;
+}
+
+body.dark-mode .interception-procedure li:hover::before {
+    background-color: #3C8CE6;
+}
+
+/* Convoy Formation Diagrams */
+.formations-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Reduced spacing between diagrams */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.formation-diagram {
+    text-align: center;
+}
+
+.formation-diagram h4 {
+    margin-bottom: 1rem;
+}
+
+.convoy-formation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 25px;
+    border: 2px dashed #adb5bd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    min-width: 200px; /* Reduced minimum width */
+}
+
+.convoy-formation .vehicle {
+    width: 130px; /* Reduced width of vehicle boxes */
+    padding: 12px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.convoy-formation .vehicle:hover {
+    transform: scale(1.05);
+}
+
+.vehicle.lead { background: linear-gradient(135deg, #007bff, #0056b3); }
+.vehicle.protected { background: linear-gradient(135deg, #ffc107, #d39e00); color: #212529; }
+.vehicle.rear { background: linear-gradient(135deg, #dc3545, #b02a37); }
+.vehicle.cover-front { background: linear-gradient(135deg, #17a2b8, #117a8b); }
+
+/* Dark Mode for Convoy Formations */
+body.dark-mode .convoy-formation {
+    background-color: #132b50;
+    border-color: #2F76C5;
+}
+
+body.dark-mode .vehicle.protected {
+    color: #212529; /* Keep dark text on yellow for readability */
+}
+
 
 
 @keyframes fadeIn {
