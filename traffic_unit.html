@@ -844,6 +844,7 @@ La mission d’<strong>Escorte de Convois Sensibles</strong> a pour but d’assu
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
                     targetSection.classList.add('active');
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Scroll to the top of the section
                 }
 
                 // Update active menu item
