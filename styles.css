@@ -1,0 +1,1230 @@
+:root {
+  /* Palette plus douce, proche de ton screen d'origine */
+  --bg-main: #050816;
+  --bg-elevated: #0b1020;
+  --bg-elevated-soft: #10182d;
+
+  --accent-blue: #2563eb;
+  --accent-blue-soft: #1d4ed8;
+  --accent-gold: #facc15;
+  --accent-green: #22c55e;
+  --accent-purple: #8b5cf6;
+
+  --text-primary: #f9fafb;
+  --text-muted: #9ca3af;
+  --border-soft: rgba(148, 163, 184, 0.24);
+  --sidebar-width: 260px;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --transition-fast: 0.18s ease-out;
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #020617 0, #020617 55%);
+  color: var(--text-primary);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(135deg, #020617 0, #020617 40%, #020617 100%);
+  color: var(--text-primary);
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: var(--sidebar-width);
+  padding: 20px 18px;
+  background: radial-gradient(circle at top left, #0b1020 0, #020617 70%);
+  border-right: 1px solid rgba(15, 23, 42, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px 18px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 20% 0, #facc15, #eab308 32%, #0b1120);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.9);
+}
+
+.logo-shield {
+  font-weight: 800;
+  color: #020617;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.logo-text p {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 4px 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background var(--transition-fast),
+    border-color var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.nav-item .nav-icon {
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.nav-item:hover {
+  background: radial-gradient(circle at left, rgba(37, 99, 235, 0.45), #020617);
+  border-color: rgba(59, 130, 246, 0.9);
+  color: #e5e7eb;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.6);
+  transform: translateY(-1px) translateX(1px);
+}
+
+.nav-item.active {
+  background: linear-gradient(90deg, #1d4ed8, #2563eb);
+  color: #e5e7eb;
+  border-color: rgba(37, 99, 235, 0.6);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.5);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 12px 6px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.officer-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: radial-gradient(circle at top left, #1d4ed8 0, #020617 70%);
+  border-radius: 16px;
+  padding: 10px 12px;
+  border: 1px solid rgba(37, 99, 235, 0.55);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.9);
+}
+
+.officer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: conic-gradient(
+    from 180deg,
+    #22c55e,
+    #eab308,
+    #2563eb,
+    #22c55e
+  );
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.officer-avatar span {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.officer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.officer-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.officer-rank {
+  margin: 0;
+  font-size: 11px;
+  color: #e5e7eb;
+}
+
+.officer-unit {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--accent-green);
+}
+
+.sidebar-footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.text-button {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.text-button:hover {
+  color: #e5e7eb;
+}
+
+.text-danger {
+  color: #f87171;
+}
+
+/* Main area */
+
+.main {
+  flex: 1;
+  padding: 20px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: radial-gradient(circle at top, #020617 0, #020617 65%);
+}
+
+.main-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 22px;
+  border-radius: 24px;
+  background: linear-gradient(120deg, #1d4ed8, #2563eb);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='160' height='80' viewBox='0 0 160 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='-20' y='20' width='80' height='40' rx='8' fill='%234b5563' fill-opacity='0.25'/%3E%3Crect x='60' y='-10' width='80' height='40' rx='8' fill='%234b5563' fill-opacity='0.18'/%3E%3Crect x='80' y='32' width='80' height='40' rx='8' fill='%234b5563' fill-opacity='0.18'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.main-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-sub {
+  margin: 0;
+  font-size: 13px;
+  color: #dbeafe;
+}
+
+.welcome-title {
+  margin: 4px 0 8px;
+  font-size: 26px;
+}
+
+.badge-row {
+  display: flex;
+  gap: 8px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  background: rgba(15, 23, 42, 0.18);
+  color: #e5e7eb;
+}
+
+.badge-rank {
+  border-color: rgba(248, 250, 252, 0.4);
+}
+
+.badge-id {
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.main-header-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.procedure-detail .main-header {
+  margin-bottom: 12px;
+}
+
+.procedure-detail-body {
+  background: var(--bg-elevated-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.9);
+  padding: 16px 20px 20px;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.procedure-detail-body h3 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.procedure-detail-body p {
+  margin: 0 0 6px;
+}
+
+.procedure-detail-body ul {
+  margin: 0 0 6px;
+  padding-left: 18px;
+  color: var(--text-muted);
+}
+
+/* Radio codes tables */
+
+.radio-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.radio-header-row h3 {
+  margin-bottom: 4px;
+}
+
+.radio-intro {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.radio-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(96, 165, 250, 0.7);
+  font-size: 12px;
+  color: #e5e7eb;
+}
+
+.radio-pill i {
+  color: #60a5fa;
+}
+
+.radio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.radio-card {
+  background: radial-gradient(circle at top left, #020617 0, #020617 85%);
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 10px 12px 12px;
+}
+
+.radio-card h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.radio-card-wide {
+  margin-top: 8px;
+}
+
+.radio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  background: transparent;
+}
+
+.radio-table th,
+.radio-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+}
+
+.radio-table th {
+  background: #0f172a;
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #e5e7eb;
+}
+
+.radio-table tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.radio-table tbody tr:nth-child(odd) {
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.radio-table-wide {
+  margin-top: 8px;
+}
+
+.radio-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #020617;
+}
+
+.radio-tag-green {
+  background: #22c55e;
+}
+
+.radio-tag-yellow {
+  background: #eab308;
+}
+
+.radio-tag-orange {
+  background: #f97316;
+}
+
+.radio-tag-red {
+  background: #ef4444;
+}
+
+.radio-tag-black {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.radio-tag-invictus {
+  background: linear-gradient(90deg, #1d4ed8, #22c55e);
+}
+
+.radio-tag-nova {
+  background: linear-gradient(90deg, #f97316, #ef4444);
+}
+
+.radio-tag-white {
+  background: #e5e7eb;
+}
+
+@media (max-width: 900px) {
+  .radio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.date-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(15, 23, 42, 0.4);
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.date-icon {
+  font-size: 16px;
+}
+
+/* Stats */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px; /* espace avant AccÃ¨s Rapide */
+}
+
+.stat-card {
+  background: radial-gradient(circle at top, #111827 0, #020617 70%);
+  border-radius: var(--radius-lg);
+  padding: 14px 14px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.85);
+  display: flex;
+  gap: 12px;
+}
+
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  font-size: 16px;
+}
+
+.stat-icon.users {
+  box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.6);
+}
+
+.stat-icon.shield {
+  box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.6);
+}
+
+.stat-icon.training {
+  box-shadow: inset 0 0 0 1px rgba(249, 115, 22, 0.7);
+}
+
+.stat-icon.eval {
+  box-shadow: inset 0 0 0 1px rgba(234, 179, 8, 0.7);
+}
+
+.stat-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-label {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.stat-value {
+  margin: 4px 0 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Panels */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 16px;
+}
+
+.section {
+  display: none;
+}
+
+.section.section-active {
+  display: block;
+}
+
+.panel {
+  background: var(--bg-elevated-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.9);
+}
+
+.panel-header {
+  padding: 14px 18px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Petits indicateurs colorÃ©s devant les titres de panel (sans emoji) */
+.panel-quick .panel-header h3::before,
+.panel-evals .panel-header h3::before,
+.panel-trainings .panel-header h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  margin-right: 8px;
+}
+
+.panel-quick .panel-header h3::before {
+  background: #60a5fa; /* bleu clair */
+}
+
+.panel-evals .panel-header h3::before {
+  background: #facc15; /* or */
+}
+
+.panel-trainings .panel-header h3::before {
+  background: #a855f7; /* violet */
+}
+
+.link-button {
+  border: none;
+  background: transparent;
+  color: var(--accent-blue);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 0;
+  position: relative;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.link-button:hover {
+  color: #60a5fa;
+  transform: translateX(1px);
+}
+
+.panel-empty {
+  padding: 22px 18px 24px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Espacement vertical entre les diffÃ©rents blocs du dashboard */
+.panel.panel-quick,
+.panel.panel-evals {
+  margin-top: 8px;
+}
+
+.panel.panel-trainings {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+/* Quick access */
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 6px 14px 16px;
+}
+
+.quick-card {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: radial-gradient(circle at top left, #020617 0, #020617 75%);
+  border-radius: var(--radius-md);
+  padding: 10px 11px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast),
+    box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.quick-card:hover {
+  transform: translateY(-2px) translateX(1px) scale(1.01);
+  background: radial-gradient(circle at left, rgba(37, 99, 235, 0.7), #020617);
+  border-color: rgba(59, 130, 246, 0.95);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.85);
+}
+
+.quick-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.quick-card:hover .quick-icon {
+  background: rgba(37, 99, 235, 0.95);
+  color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.quick-title {
+  margin: 0;
+  font-size: 14px;
+}
+
+.quick-sub {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+
+
+/* Trainings panel spacing */
+
+.panel-trainings .panel-empty {
+  padding-top: 18px;
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    gap: 8px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .main {
+    padding: 14px 16px 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+/* --- STYLES POUR LA NOUVELLE SECTION PROCï¿½DURES --- */
+
+/* Ajustement pour le conteneur de la section */
+.section[data-section="procedures"] .container-fluid {
+    padding: 0;
+}
+
+/* Style de la barre de recherche pour le thï¿½me sombre */
+#procedureSearch {
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    border-color: var(--border-soft);
+}
+#procedureSearch::placeholder {
+    color: var(--text-muted);
+}
+#procedureSearch:focus {
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.5);
+}
+
+/* Style de la liste des procï¿½dures pour le thï¿½me sombre */
+#procedureList.list-group {
+    background-color: transparent;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+}
+#procedureList .list-group-item {
+    background-color: var(--bg-elevated-soft);
+    color: var(--text-muted);
+    border: none;
+    border-bottom: 1px solid var(--border-soft);
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+#procedureList .list-group-item:last-child {
+    border-bottom: none;
+}
+#procedureList .list-group-item:hover {
+    background-color: #10182d;
+    color: var(--text-primary);
+}
+#procedureList .list-group-item.active {
+    background-color: var(--accent-blue);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+/* Style de la carte de contenu pour le thï¿½me sombre */
+#procedureContent .card {
+    background-color: var(--bg-elevated-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    height: 100%;
+}
+#procedureContent .card-title {
+    color: var(--text-primary);
+}
+#procedureContent .card-body hr {
+    border-color: var(--border-soft);
+}
+#procedureContent h2, #procedureContent h3, #procedureContent h4 {
+    color: var(--text-primary);
+}
+#procedureContent ul, #procedureContent p {
+    color: var(--text-muted);
+}
+
+
+/* --- NOUVEAUX STYLES : Grille de cartes & Modale --- */
+
+/* Carte de procï¿½dure */
+.procedure-card {
+    background: var(--bg-elevated-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.procedure-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.4);
+    border-color: var(--accent-blue);
+}
+
+.procedure-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.procedure-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--bg-elevated);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--accent-blue);
+}
+
+.procedure-card-level {
+    font-size: 12px;
+    padding: 4px 12px;
+}
+
+.level-easy { background-color: rgba(34, 197, 94, 0.2); color: #22c55e; border: 1px solid #22c55e; }
+.level-intermediate { background-color: rgba(234, 179, 8, 0.2); color: #eab308; border: 1px solid #eab308; }
+.level-advanced { background-color: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid #ef4444; }
+
+.procedure-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+/* Modale de procï¿½dure */
+.modal-content {
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--accent-blue);
+    border-radius: var(--radius-lg);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.modal-header .modal-title {
+    color: var(--text-primary);
+}
+
+.modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.modal-body h2, .modal-body h3, .modal-body h4 {
+    color: var(--text-primary);
+}
+.modal-body ul, .modal-body p {
+    color: var(--text-muted);
+}
+.modal-body strong {
+    color: var(--text-primary);
+}
+
+
+/* --- STYLES POUR LA VUE FOCUS & DESIGN FUTURISTE --- */
+
+#procedureSelectionView, #procedureFocusView {
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.view-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    position: absolute; /* Empï¿½che l'ï¿½lï¿½ment cachï¿½ d'affecter la mise en page */
+}
+
+#procedureFocusContent {
+    overflow-y: auto; /* Permet de scroller si le contenu est long */
+    padding: 1rem;
+    background: rgba(11, 16, 32, 0.7);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Amï¿½lioration des cartes pour un look futuriste */
+.procedure-card {
+    border: 1px solid var(--border-soft);
+    background: linear-gradient(145deg, var(--bg-elevated-soft), var(--bg-elevated));
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.procedure-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.5), 0 0 10px rgba(37, 99, 235, 0.3);
+    border-color: rgba(59, 130, 246, 0.8);
+}
+
+.procedure-card-icon {
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.procedure-card:hover .procedure-card-icon {
+    color: #93c5fd; /* Bleu plus clair */
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+}
+
+/* Style du bouton retour */
+#backToGridBtn {
+    border-radius: 999px;
+    background: var(--bg-elevated-soft);
+    border-color: var(--border-soft);
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+#backToGridBtn:hover {
+    background-color: var(--accent-blue);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
+}
+
+
+/* --- ANIMATIONS AMï¿½LIORï¿½ES --- */
+
+/* Keyframes pour l'apparition des cartes */
+@keyframes card-appear {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Appliquer l'animation en cascade aux cartes */
+.procedure-card {
+    /* On s'assure que les cartes sont invisibles avant l'animation */
+    opacity: 0; 
+    animation: card-appear 0.5s ease-out forwards;
+    animation-delay: calc(var(--animation-order) * 60ms);
+}
+
+/* Amï¿½lioration de la transition entre les vues */
+#procedureSelectionView, #procedureFocusView {
+    transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.view-hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    position: absolute;
+}
+
+/* --- STYLES DES BOUTONS DE NAVIGATION EN VUE FOCUS --- */
+
+.focus-nav-btn, #backToGridBtn {
+    background: rgba(11, 16, 32, 0.7); /* Semi-transparent */
+    border: 1px solid var(--border-soft);
+    color: var(--text-primary);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.focus-nav-btn:hover, #backToGridBtn:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.7);
+    transform: translateY(-2px);
+}
+
+#prevProcedureBtn:hover {
+    transform: translateX(-5px) translateY(-2px);
+}
+
+#nextProcedureBtn:hover {
+    transform: translateX(5px) translateY(-2px);
+}
+
+
+/* --- ANIMATION DE CHANGEMENT DE PAGE --- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section.section-active {
+  animation: fadeIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* --- ANIMATION DE TRANSITION DE CONTENU DANS LA VUE FOCUS --- */
+
+#procedureFocusContent {
+    transition: opacity 0.2s ease-in-out; /* Durï¿½e de l'animation */
+}
+
+.content-fading-out {
+    opacity: 0 !important; /* Force l'opacitï¿½ ï¿½ zï¿½ro pendant la transition */
+}
+
+/* --- STYLE BARRE DE RECHERCHE AMï¿½LIORï¿½E --- */
+
+.input-group-text {
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-soft);
+    color: var(--text-muted);
+    border-right: none;
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    padding-left: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#procedureSearch {
+    border-left: none;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+#procedureSearch:focus + .input-group-text,
+#procedureSearch:focus-within .input-group-text {
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.5);
+    background-color: var(--bg-elevated); /* Keep background consistent */
+}
+
+/* Ajustement pour que l'ombre du focus soit sur tout l'input-group */
+.input-group:focus-within .input-group-text,
+.input-group:focus-within #procedureSearch {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.5);
+}
+
+.input-group:focus-within #procedureSearch {
+    box-shadow: none; /* remove redundant shadow from input itself */
+}
+
+/* --- NOUVELLE CORRECTION POUR LE GLOW DE LA BARRE DE RECHERCHE --- */
+
+/* Appliquer le glow et les coins arrondis au conteneur parent */
+.input-group:focus-within {
+    border-radius: var(--radius-md); /* Appliquer les coins arrondis au parent pour que l'ombre suive */
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.5); /* Le glow unifié */
+}
+
+/* S'assurer que les enfants n'ont pas d'ombre et que leurs bordures sont correctes */
+.input-group:focus-within .input-group-text,
+.input-group:focus-within #procedureSearch {
+    border-color: var(--accent-blue);
+    box-shadow: none; /* Pas d'ombre sur les enfants */
+}
+
+/* --- ANNULATION DU GLOW RECTANGULAIRE --- */
+.input-group:focus-within {
+    box-shadow: none !important;
+}
+
+/* --- ULTIMATE SEARCH BAR GLOW FIX --- */
+
+/* Reset conflicting styles from children on focus */
+.input-group:focus-within .input-group-text,
+.input-group:focus-within #procedureSearch,
+#procedureSearch:focus {
+    box-shadow: none !important; /* Ensure no individual shadows */
+    border-color: var(--accent-blue) !important; /* Ensure consistent border color */
+    background-color: var(--bg-elevated-soft) !important; /* Ensure consistent background */
+    color: var(--text-primary) !important; /* Ensure consistent text color */
+}
+
+/* Apply unified, animated glow to the parent input-group */
+.input-group {
+    /* Ensure border-radius and transition are defined on the parent for the unified glow */
+    border-radius: var(--radius-md); /* Match the children's rounded ends */
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.5); /* The beautiful, unified glow */
+    border-color: var(--accent-blue); /* Give the group a border color on focus */
+}
+
+/* Ensure consistent text and background color on focus for children */
+.input-group:focus-within .input-group-text {
+    background-color: var(--bg-elevated-soft);
+    color: var(--text-primary);
+}
+
+.input-group:focus-within #procedureSearch {
+    background-color: var(--bg-elevated-soft);
+    color: var(--text-primary);
+}
+
+/* --- CORRECTION GÉNÉRIQUE DU STYLE DES BARRES DE RECHERCHE --- */
+
+/* Cible toutes les barres de recherche dans les conteneurs de grille */
+.grid-view-container .form-control {
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    border-color: var(--border-soft);
+    border-left: none;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.grid-view-container .form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* Cible la partie icône des barres de recherche */
+.grid-view-container .input-group-text {
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-soft);
+    color: var(--text-muted);
+    border-right: none;
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    padding-left: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Applique un glow unifié et animé au parent .input-group au focus */
+.grid-view-container .input-group {
+    border-radius: var(--radius-md);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.grid-view-container .input-group:focus-within {
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.5);
+}
+
+/* S'assure que les enfants ont la bonne bordure/couleur au focus, mais pas d'ombre */
+.grid-view-container .input-group:focus-within .form-control,
+.grid-view-container .input-group:focus-within .input-group-text {
+    border-color: var(--accent-blue);
+    background-color: var(--bg-elevated-soft);
+    color: var(--text-primary);
+    box-shadow: none;
+}

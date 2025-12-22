@@ -1,783 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlife Police Department</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
-    <button id="menu-toggle">☰</button>
-    <nav id="side-menu">
-        <ul class="menu-list">
-            <li>
-                <a href="#" class="menu-item" data-target="reglement">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-book"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
-                    <span>Règlement RPD</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="menu-item" data-target="hierarchie">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-sitemap"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 15l6 6" /><path d="M21 15l-6 6" /><path d="M9 15v-4a3 3 0 0 1 3 -3h0a3 3 0 0 1 3 3v4" /><path d="M12 3l0 5" /><path d="M5.636 5.636l1.414 1.414" /><path d="M18.364 5.636l-1.414 1.414" /></svg>
-                    <span>Structure Hiérarchique</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="menu-item" data-target="uniformes">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-hanger"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.004 6.004l6.002 6.002a2.002 2.002 0 1 1 -2.83 2.83l-5.176 -5.176v-3.66h-1v3.66l-5.176 5.175a2.002 2.002 0 1 1 -2.83 -2.83l6.002 -6.002a3.002 3.002 0 0 1 4.242 0z" /></svg>
-                    <span>Uniformes et Armes</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="menu-item" data-target="radio">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-radio"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3l-9.389 9.389a3.515 3.515 0 0 0 0 4.97l4.97 4.97a3.515 3.515 0 0 0 4.97 0l9.389 -9.389" /><path d="M12 12l-6.5 -6.5" /><path d="M7.5 16.5l-1 -1" /><path d="M18 6l-1 -1" /><path d="M20 8l-1.5 -1.5" /><path d="M3 11.5l1.5 -1.5" /><path d="M11 3.5l-1.5 1.5" /></svg>
-                    <span>Code Radio</span>
-                </a>
-            </li>
-            <li class="has-submenu">
-                <a href="#" class="menu-item submenu-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg>
-                    <span>Procédures</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-down dropdown-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
-                </a>
-                <ul class="submenu">
-                    <li>
-                        <a href="#" class="menu-item" data-target="procedures">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-gavel"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" /><path d="M6 9l4 4" /><path d="M13 10l-4 -4" /><path d="M4 20l3.5 -3.5" /><path d="M15.5 11.5l-5 5" /><path d="M10 5l-7 7" /><path d="M21 14l-7 7" /></svg>
-                            <span>Procédures Judiciaires</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="menu-item" data-target="miranda">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21.5a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" /><path d="M9 12l2 2l4 -4" /></svg>
-                            <span>Droit Miranda</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="menu-item" data-target="balisage">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-cone-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 7m-7 0a7 3 0 1 0 14 0a7 3 0 1 0 -14 0" /><path d="M5 7v10" /><path d="M19 7v10" /><path d="M5 17a7 3 0 1 0 14 0a7 3 0 1 0 -14 0" /></svg>
-                            <span>Balisage et Sécurité</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="has-submenu menu-section-separator">
-                <a href="#" class="menu-item submenu-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-car"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" /></svg>
-                    <span>Traffic Unit</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-down dropdown-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
-                </a>
-                <ul class="submenu">
-                    <li>
-                        <a href="traffic_unit.html" class="menu-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg>
-                            <span>Présentation</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="traffic_unit.html#obligation-prerequis" class="menu-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-clipboard-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M9 14l2 2l4 -4" /></svg>
-                            <span>Obligation - Prérequis</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="traffic_unit.html#mots-vocabulaire" class="menu-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-book"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
-                            <span>Mots Vocabulaire</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="traffic_unit.html#formation-pit" class="menu-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-road"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 19l4 -14" /><path d="M16 5l4 14" /><path d="M12 8v-2" /><path d="M12 13v-2" /><path d="M12 18v-2" /></svg>
-                            <span>Formation PIT</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="traffic_unit.html#formation-alcoolemie" class="menu-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bottle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5h4v-2a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v2zm0 0v9a3 3 0 0 0 6 0v-9h-6z" /><path d="M6 10a6 6 0 0 1 6 6v0a6 6 0 0 1 -6 6h-2a2 2 0 0 1 -2 -2v-7a4 4 0 0 1 4 -4h2z" /><path d="M18 10a6 6 0 0 0 -6 6v0a6 6 0 0 0 6 6h2a2 2 0 0 0 2 -2v-7a4 4 0 0 0 -4 -4h-2z" /></svg>
-                            <span>Formation Alcoolémie</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="traffic_unit.html#formation-control-vitesse" class="menu-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-speedometer"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 12v3a8 8 0 1 0 16 0v-3" /><path d="M7.749 8.005l-2.749 -1.005" /><path d="M16.25 8.005l2.75 -1.005" /><path d="M6.5 12a1.5 1.5 0 0 0 3 0" /><path d="M17.5 12a1.5 1.5 0 0 0 -3 0" /><path d="M12 12a4 4 0 1 0 0 8a4 4 0 0 0 0 -8" /><path d="M12 12v2.5" /><path d="M12 12l2.5 -2.5" /></svg>
-                            <span>Formation Contrôle de Vitesse</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="traffic_unit.html#formation-escorte-convois" class="menu-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21.5a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" /><path d="M9 12l2 2l4 -4" /></svg>
-                            <span>Formation Escorte de Convois</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rockford PD - MDT System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <span class="logo-shield">R</span>
+          </div>
+          <div class="logo-text">
+            <h1>ROCKFORD PD</h1>
+            <p>Illinois · MDT System</p>
+          </div>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-item active" href="#" data-section-target="dashboard">
+            <span class="nav-icon"><i class="fa-solid fa-gauge"></i></span>
+            <span>Tableau de bord</span>
+          </a>
+          <a class="nav-item" href="#" data-section-target="traffic">
+            <span class="nav-icon"><i class="fa-solid fa-car-side"></i></span>
+            <span>Traffic Unit</span>
+          </a>
+          <a class="nav-item" href="#" data-section-target="training">
+            <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span>Formations</span>
+          </a>
+          <a class="nav-item" href="#" data-section-target="evaluations">
+            <span class="nav-icon"><i class="fa-solid fa-clipboard-check"></i></span>
+            <span>Évaluations</span>
+          </a>
+          <a class="nav-item" href="#" data-section-target="procedures">
+            <span class="nav-icon"><i class="fa-solid fa-book"></i></span>
+            <span>Procédures</span>
+          </a>
+        </nav>
+      </aside>
 
-    <div id="page-wrapper">
-        <header class="header">
-            <div class="els-container">
-                <div class="light red-1"></div>
-                <div class="light blue-1"></div>
-                <div class="light red-2"></div>
-                <div class="light blue-2"></div>
+      <main class="main">
+        <header class="main-header">
+          <div>
+            <p class="welcome-sub">Rockford Police Department · Illinois</p>
+            <h2 class="welcome-title">Bienvenue, Agent</h2>
+          </div>
+          <div class="main-header-right">
+            <div class="date-pill">
+              <span class="date-icon"><i class="fa-regular fa-clock"></i></span>
+              <span>jeudi 18 décembre 2025</span>
             </div>
-            <div class="header-content">
-                <img src="media/logo/rpd.png" alt="RPD Logo" class="logo">
-                <h1>Vlife Police Department</h1>
-            </div>
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div class="slider round"></div>
-                </label>
-            </div>
+          </div>
         </header>
 
-        <div id="main-container">
-            <div id="main-content" class="container mt-4">
-            <div class="content-section" id="reglement">
-                <h2 class="mt-3">Règlement RPD</h2>
-                <h4>I. Mission et valeurs du RPD</h4>
-                <p>Le Rockford Police Department a pour mission de protéger la population, maintenir la paix, faire respecter la loi et assurer la sécurité de tous les citoyens.</p>
-                <p>Chaque officier incarne les valeurs fondamentales suivantes :</p>
-                <ul>
-                    <li><strong>Intégrité :</strong> être honnête et impartial en toute situation.</li>
-                    <li><strong>Courage :</strong> agir avec fermeté malgré le danger.</li>
-                    <li><strong>Respect :</strong> traiter chaque citoyen et collègue avec dignité.</li>
-                    <li><strong>Discipline :</strong> représenter la loi de façon exemplaire.</li>
-                </ul>
-                <p>Le serment du RPD engage chaque agent à servir et protéger sans discrimination ni abus.</p>
-
-                <h4>II. Devoirs et conduite des agents</h4>
-                <ul>
-                    <li>Un officier doit rester calme, poli et professionnel en toute circonstance.</li>
-                    <li>La neutralité absolue est requise : aucune préférence politique, clanique ou sociale.</li>
-                    <li>L’usage de la force doit toujours être proportionné et justifié.</li>
-                    <li>Les ordres des supérieurs doivent être exécutés, sauf s’ils sont manifestement illégaux.</li>
-                    <li>Tout manquement à la discipline, mensonge ou dissimulation de faute pourra entraîner une enquête interne.</li>
-                    <li>Les relations entre collègues doivent rester respectueuses et hiérarchiques.</li>
-                    <li>Le non-respect de la hiérarchie constitue une faute grave.</li>
-                    <li>La radio interne doit rester claire, concise et exempte de bavardages inutiles.</li>
-                </ul>
-
-                <h4>III. Armement et matériel</h4>
-                <ul>
-                    <li>L’arme ne doit jamais être dégainée sans raison valable.</li>
-                    <li>Chaque agent doit avoir le matériel nécessaire à l'exécution de ses tâches.</li>
-                </ul>
-
-                <h4>IV. Patrouilles et interventions</h4>
-                <ul>
-                    <li>Les patrouilles sont effectuées en binôme minimum sauf exception validée par un supérieur.</li>
-                    <li>Avant chaque début de service, l’agent doit annoncer sa mise en service radio.</li>
-                    <li>La conduite doit être prudente et les agents doivent respecter le code de la route, les gyrophares ne s’allument qu’en urgence.</li>
-                    <li>Les agents doivent couvrir l’ensemble du territoire de Rockford.</li>
-                    <li>En intervention, le gradé sur place prend la direction des opérations.</li>
-                    <li>Les civils doivent toujours être traités avec respect, calme et autorité maîtrisée.</li>
-                    <li>L’usage des armes à feu ne peut se faire qu’après avertissement clair et en dernier recours.</li>
-                </ul>
+        <!-- SECTION: Tableau de bord -->
+        <section class="section section-active" data-section="dashboard">
+          <section class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon shield"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="stat-body"><p class="stat-label">Agents Actifs</p><p class="stat-value">2</p></div>
             </div>
-            <div class="content-section" id="uniformes">
-                <div class="row">
-                    <div class="col-md-7">
-                        <h3 class="mt-3">Uniformes</h3>
-                        <p>L'uniforme est le symbole de notre engagement et de notre professionnalisme. Il reflète l'ordre et la discipline du Rockford Police Department. Ce document détaille les tenues réglementaires pour chaque grade.</p>
-                        <p>Vous pouvez consulter les tenues réglementaires par rang en cliquant sur le lien ci-dessous :</p>
-                        <a href="https://docs.google.com/document/d/1tH1BoSTruCAPfL25sU4gBFp3g-SkR2Zhx9ZEpLl694g/edit?tab=t.0" class="btn btn-primary" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill me-2" viewBox="0 0 16 16">
-  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
-</svg>Voir les tenues réglementaires</a>
-                    </div>
-                    <div class="col-md-5">
-                        <h3 class="mt-3">Armes</h3>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#armesModal">
-                            <img src="media/uniforme_et_armes/arme_rpd.png" class="img-fluid" alt="Armes RPD" style="width: 100%;">
-                        </a>
-                    </div>
+            <div class="stat-card">
+              <div class="stat-icon training"><i class="fa-solid fa-chalkboard-user"></i></div>
+              <div class="stat-body"><p class="stat-label">Formations</p><p class="stat-value">7</p></div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon eval"><i class="fa-solid fa-clipboard-list"></i></div>
+              <div class="stat-body"><p class="stat-label">Évaluations</p><p class="stat-value">0</p></div>
+            </div>
+          </section>
+          <section class="main-grid">
+            <div class="panel panel-quick">
+              <header class="panel-header"><h3>Accès Rapide</h3></header>
+              <div class="quick-grid">
+                <button class="quick-card" data-section-target="training" type="button">
+                  <span class="quick-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                  <div><p class="quick-title">Formations</p><p class="quick-sub">Catalogue des formations</p></div>
+                </button>
+                <button class="quick-card" data-section-target="procedures" type="button">
+                  <span class="quick-icon"><i class="fa-solid fa-book"></i></span>
+                  <div><p class="quick-title">Procédures</p><p class="quick-sub">Manuel des procédures</p></div>
+                </button>
+              </div>
+            </div>
+            <div class="panel panel-evals">
+              <header class="panel-header"><h3>Dernières Évaluations</h3><button class="link-button">Voir tout ▸</button></header>
+              <div class="panel-empty"><p>Aucune évaluation récente</p></div>
+            </div>
+          </section>
+        </section>
+
+        <!-- SECTION: Traffic Unit -->
+        <section class="section" data-section="traffic">
+          <div class="grid-view-container container-fluid h-100 d-flex flex-column">
+            <div class="row mb-4">
+              <div class="col">
+                <h3>Formations de la Traffic Unit</h3>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                  <input type="text" id="trafficSearch" class="form-control" placeholder="Rechercher une formation...">
                 </div>
+              </div>
             </div>
-            <div class="content-section" id="radio">
-                <h2 class="mt-3">Code Radio</h2>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal">
-                    <img src="media/code_radio/coderadio.png" class="img-fluid" alt="Codes radio de la police">
-                </a>
+            <div id="trafficGrid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+          </div>
+        </section>
 
-                <div class="my-4">
-                    <h4>Personnalisation des exemples</h4>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <label for="radio-grade" class="form-label">Votre Grade</label>
-                            <input type="text" class="form-control" id="radio-grade" value="Sergents I">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="radio-nom" class="form-label">Votre Nom</label>
-                            <input type="text" class="form-control" id="radio-nom" value="Honorable">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="radio-unite" class="form-label">Votre Unité</label>
-                            <input type="text" class="form-control" id="radio-unite" value="Adam-01">
-                        </div>
-                    </div>
+        <!-- SECTION: Formations -->
+        <section class="section" data-section="training">
+          <div class="grid-view-container container-fluid h-100 d-flex flex-column">
+            <div class="row mb-4">
+              <div class="col">
+                <h3>Catalogue des Formations</h3>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                  <input type="text" id="trainingSearch" class="form-control" placeholder="Rechercher une formation...">
                 </div>
-
-                <h4 class="mt-4">Exemples écrit (/r dans le chat)</h4>
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Prise de service (10-8) :</strong> Central, 10-8 pour <span class="radio-grade">Sergents I</span> <span class="radio-nom">Honorable</span>, prise de service.”</li>
-                    <li class="list-group-item"><strong>Fin de service (10-7) :</strong> Central, 10-7, fin de service pour <span class="radio-grade">Sergents I</span> <span class="radio-nom">Honorable</span>, retour au poste.”</li>
-                    <li class="list-group-item"><strong>Début de patrouille (10-41) :</strong> “<span class="radio-unite">Adam-01</span> pour Central, 10-41, début de patrouille.”</li>
-                    <li class="list-group-item"><strong>Fin de patrouille (10-42) :</strong> “<span class="radio-unite">Adam-01</span> pour Central, 10-42, fin de patrouille.”</li>
-                </ul>
-
-                <h4 class="mt-4">Exemples Radio</h4>
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>10-28 (Vérification de plaque) :</strong> "Central, je suis sur un 10-28 sur une plaque d'immatriculation [Numéro de plaque], véhicule [Couleur et modèle], secteur [Secteur]."</li>
-                    <li class="list-group-item"><strong>10-5 (Demande de renfort) :</strong> "10-29, suspect rechercher [Description suspect], [Secteur connu/Dernier connu]."</li>
-                    <li class="list-group-item"><strong>10-99 (Officier à terre) :</strong> "10-99, Officier à terre, besoin d'une ambulance et d'unités disponibles [Lieu précis]."</li>
-                    <li class="list-group-item"><strong>10-60 (Barrage mis en place) :</strong>  "10-60, Barrage établi au niveau de [Lieu précis]."</li>          
-                    <li class="list-group-item"><strong>10-31 (Début de course-poursuite) :</strong> "10-31, Début de course-poursuite sur un(e) [Modèle du véhicule] [Couleur], direction [Direction: Zone indue, disco, quartier riche...]."</li>
-                    <li class="list-group-item"><strong>10-98 (Fin de course-poursuite) :</strong> "Fin de course-poursuite, suspect interpellé / en fuite, secteur [Secteur]."</li>
-
-                </ul>
+              </div>
             </div>
-            <div class="content-section" id="miranda">
-                <h2 class="mt-3">Droit Miranda</h2>
-                <p>Nous sommes actuellement le <span id="current-datetime"></span>.</p>
-                <p class="lead">Vous êtes actuellement placé en état d’arrestation.<br>
-                    Vous avez le droit de garder le silence.<br>
-                    Tout ce que vous direz pourra être retenu contre vous devant un tribunal.<br>
-                    Vous avez le droit à un avocat.<br>
-                    Si vous n’en avez pas les moyens, un avocat vous sera commis d’office.<br>
-                    Vous avez également le droit à une assistance médicale en cas de blessure.<br>
-                    Avez-vous compris vos droits ?</p>
-            </div>
-            <div class="content-section" id="hierarchie"> 
-                <h2 class="mt-3">Structure hiérarchique</h2>
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-textual-tab" data-bs-toggle="pill" data-bs-target="#pills-textual" type="button" role="tab" aria-controls="pills-textual" aria-selected="true">Présentation textuelle</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-pyramid-tab" data-bs-toggle="pill" data-bs-target="#pills-pyramid" type="button" role="tab" aria-controls="pills-pyramid" aria-selected="false">Présentation en pyramide</button>
-                    </li>
-                </ul>
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-textual" role="tabpanel" aria-labelledby="pills-textual-tab">
-                        <h4>Direction</h4>
-                        <p>Dirige et supervise l’ensemble du département.
-                        Gère la politique globale du RPD et valide les grandes décisions.
-                        Peut déléguer certains pouvoirs à l’État-Major.</p>
-                        <h4>État-Major</h4>
-                        <p>Composé du Chief, du Deputy-Chief et du Commandant.
-                        Supervise toutes les unités et approuve les opérations sensibles.
-                        Statue sur les nominations, promotions et sanctions majeures.
-                        Doit des comptes à la direction.</p>
-                        <h4>Haut Corps de Commandement</h4>
-                        <p>Réunit les Capitaines, Lieutenants et Majors.
-                        Gère les unités, forme les nouveaux officiers et veille au bon déroulement des services.
-                        Autorise ou interdit les interventions à risque selon la situation.</p>
-                        <h4>Corps de Commandement</h4>
-                        <p>Inclut les Sergents I, II, Chef et les sous-officiers d’encadrement.
-                        Encadre directement les agents sur le terrain.
-                        Assure la cohésion, la discipline et le respect des procédures.</p>
-                        <h4>Corps des Officiers</h4>
-                        <p>Officiers, agents et recrues.
-                        Représentent la majorité opérationnelle du département.
-                        Effectuent les patrouilles, interventions et contrôles quotidiens, essentiels au RPD.</p>
-                    </div>
-                    <div class="tab-pane fade" id="pills-pyramid" role="tabpanel" aria-labelledby="pills-pyramid-tab">
-                        <div class="pyramid-container mt-4">
-                            <div class="pyramid-level bg-danger text-white">
-                                Direction
-                            </div>
-                            <div class="pyramid-level bg-warning text-dark">
-                                État-Major
-                                <div class="grade-details">
-                                    <p>Chief</p>
-                                    <p>Deputy-Chief</p>
-                                    <p>Commandant</p>
-                                </div>
-                            </div>
-                            <div class="pyramid-level bg-info text-dark">
-                                Haut Corps de Commandement
-                                <div class="grade-details">
-                                    <p>Capitaines</p>
-                                    <p>Lieutenants</p>
-                                    <p>Majors</p>
-                                </div>
-                            </div>
-                            <div class="pyramid-level bg-primary text-white">
-                                Corps de Commandement
-                                <div class="grade-details">
-                                    <p>Sergents I, II, Chef</p>
-                                    <p>Sous-officiers d’encadrement</p>
-                                </div>
-                            </div>
-                            <div class="pyramid-level bg-success text-white">
-                                Corps des Officiers
-                                <div class="grade-details">
-                                    <p>Officiers</p>
-                                    <p>Agents</p>
-                                    <p>Recrues</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div id="trainingGrid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+          </div>
+        </section>
+
+        <!-- SECTION: Évaluations -->
+        <section class="section" data-section="evaluations">
+          <div class="panel"><header class="panel-header"><h3>Évaluations des Agents</h3></header><div class="panel-empty"><p>Historique des évaluations, fiches individuelles, notes.</p></div></div>
+        </section>
+
+        <!-- SECTION: Procédures -->
+        <section class="section" data-section="procedures">
+          <div class="grid-view-container container-fluid h-100 d-flex flex-column">
+            <div class="row mb-4">
+              <div class="col">
+                <h3>Manuel des Procédures</h3>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                  <input type="text" id="procedureSearch" class="form-control" placeholder="Rechercher par titre ou mot-clé...">
                 </div>
+              </div>
             </div>
-            <div class="content-section" id="procedures">
-                <h2 class="mt-3">Guide d’Arrestation</h2>
-                <p class="text-muted">Édition 2025</p>
+            <div id="procedureGrid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+          </div>
+        </section>
 
-                <h4>1. Conditions d’interpellation</h4>
-                <p>Une personne ne peut être interpellée que dans un <strong>cadre strictement légal et justifié</strong> (en rp).</p>
-                <h5>Motifs valables d’interpellation :</h5>
-                <ul>
-                    <li>Surpris en <strong>flagrant délit</strong> (vol, agression, effraction, meurtre, trafic, prise d’otage, etc.) ;</li>
-                    <li>Désigné formellement par un <strong>témoin fiable et cohérent</strong> ;</li>
-                    <li>Identifié via une <strong>preuve matérielle claire</strong> (caméras, radio, description précise, plaque voiture: sauf si volée) ;</li>
-                    <li>Visé par un <strong>mandat valide</strong> ou un ordre hiérarchique direct.</li>
-                </ul>
-                <h5>Motifs NON valables :</h5>
-                <ul>
-                    <li>Simple <strong>suspicion vague</strong></li>
-                    <li><strong>Mauvaise attitude</strong>: Insulte ou provocation verbale</li>
-                    <li>Présence dans une zone sensible <strong>sans preuve</strong> (Sinon c'est méta)</li>
-                </ul>
-                <p class="text-warning fw-bold">⚠️ Une contravention seule <strong>ne JUSTIFIE pas</strong> une arrestation.</p>
-                <h5>Procédure lors de l’interpellation :</h5>
-                <ul>
-                    <li><strong>Annonce orale RP :</strong> « RPD, vous êtes interpellé, veuillez lever les mains et ne pas bouger. »</li>
-                    <li>En cas de <strong>coopération</strong> : menottage et sécurisation.</li>
-                    <li>En cas de <strong>fuite</strong> : code radio et poursuite.</li>
-                    <li>En cas de <strong>résistance</strong> : usage de la force <strong>proportionné et justifié</strong> (voir section: Règlement RPD).</li>
-                </ul>
-
-                <h4>2. Transfert au Poste de Police (PDP)</h4>
-                <p>Après interpellation, le suspect est escorté vers le PDP sous <strong>surveillance constante</strong>.</p>
-                <h5>Règles pendant le transport :</h5>
-                <ul>
-                    <li>Le suspect doit rester <strong>menotté</strong></li>
-                    <li><strong>Aucune violence gratuite</strong></li>
-                    <li><strong>Aucun dialogue insultant</strong></li>
-                    <li>Présence d’au moins <strong>1 agent en escorte</strong></li>
-                </ul>
-
-                <h4>3. Lecture des droits Miranda (obligatoire)</h4>
-                <p>Avant toute fouille ou amende, les droits Miranda doivent être lus de manière claire.</p>
-                <h5>Réponses possibles :</h5>
-                <ul>
-                    <li>✅ <strong>Oui :</strong> demander ensuite : « Souhaitez-vous exercer l’un de vos droits : avocat, silence, soins ou nourriture ? »</li>
-                    <li>❌ <strong>Non :</strong> répéter calmement <strong>jusqu’à 3 fois</strong>. Après cela, poursuivre en demandant : « Souhaitez-vous la présence d’un avocat ou une assistance médicale ? »</li>
-                </ul>
-                <p>La non-lecture constitue un <strong>vice de procédure</strong>.</p>
-
-                <h4>4. Fouille réglementaire</h4>
-                <p>La fouille est <strong>strictement réglementée</strong> et s’effectue dans l’enceinte du PDP.</p>
-                <h5>Position obligatoire :</h5>
-                <ul>
-                    <li>Suspect <strong>dos au mur</strong></li>
-                    <li>Aucune arme (l'étale) sortie par l’agent sauf <strong>danger immédiat</strong>. Taser en safe (Touche "r" avec le tazer dans les mains).</li>
-                </ul>
-                <h5>Phrase réglementaire RP :</h5>
-                <p class="blockquote">« Si vous vous retournez ou bougez sans instruction, vous écoperez d’une amende pour <strong>refus d’obtempérer</strong>. Toute récidive sera <strong>cumulable</strong>. »</p>
-                <h5>Étapes de fouille :</h5>
-                <ul>
-                    <li><strong>Fouille complète:</strong> vérification présence d’arme</li>
-                    <li><strong>Retrait objets prohibés</strong></li>
-                </ul>
-                <h5>Cas d’arme détectée :</h5>
-                <ul>
-                    <li><strong>Question RP :</strong> « Possédez-vous une licence pour cette arme ? »</li>
-                    <li>Si <strong>licence valide</strong> : La possession peut être tolérée</li>
-                    <li>Si <strong>aucune licence</strong> : saisie définitive</li>
-                    <li>(HRP: Les armes sont retirées dans tous les cas durant la garde à vue.)</li>
-                </ul>
-                <p class="text-warning fw-bold">⚠️ Toute utilisation <strong>abusive ou meurtrière</strong> d’une arme annule la licence.</p>
-
-                <h4>5. Droits du suspect</h4>
-                <p>Si le M.E.C demande :</p>
-                <ul>
-                    <li><strong>Un avocat</strong>
-                        <ul>
-                            <li><code>/advert Un avocat est demandé au PDP dans un délai de 3 minutes.</code></li>
-                            <li>Présence obligatoire avant tout interrogatoire ou amende</li>
-                            <li>S’il ne se présente pas sous <strong>3 minutes</strong>, son droit devient <strong>caduc</strong></li>
-                        </ul>
-                    </li>
-                    <li><strong>Soins médicaux</strong>
-                        <ul>
-                            <li><code>/advert Un médecin est demandé au PDP dans un délai de 3 minutes.</code></li>
-                            <li>Si aucun médecin ne vient : <code>/me Effectue les premiers soins</code></li>
-                        </ul>
-                    </li>
-                    <li><strong>Nourriture</strong>
-                        <ul>
-                            <li><code>/advert Un cuisinier est demandé au PDP dans un délai de 3 minutes.</code></li>
-                            <li>Si indisponible : passer a la suite.</li>
-                        </ul>
-                    </li>
-                </ul>
-                <p class="text-danger fw-bold">⚠️ Tout intervenant doit passer par le <strong>hall visiteur uniquement</strong>. Toute personne passant par le parking sera refusée dans le PDP.</p>
-                
-                <h4>6. Présence d’un juge en ville</h4>
-                <p>Si un juge est présent, le M.E.C doit lui être <strong>présenté avant toute sanction</strong>.</p>
-                <h5>L’agent doit :</h5>
-                <ul>
-                    <li>Escorter calmement le suspect</li>
-                    <li>Présenter les <strong>faits, preuves et comportement</strong></li>
-                    <li><strong>Sécuriser</strong> la salle d’audience</li>
-                </ul>
-                <p>La décision du juge est <strong>irrévocable</strong>. Elle peut mener à : libération, amende, détention.</p>
-
-                <h4>7. VICES DE PROCÉDURE</h4>
-                <p>Tout manquement entraîne la <strong>libération immédiate</strong> du M.E.C.</p>
-                <h5>Sont considérés comme vices :</h5>
-                <ul>
-                    <li>Arrestation <strong>sans délit ou crime avéré</strong></li>
-                    <li><strong>Non-lecture</strong> des droits Miranda</li>
-                    <li><strong>Refus de relire</strong> les droits après incompréhension (sauf si excès du M.E.C)</li>
-                    <li><strong>Violence, intimidation ou humiliation</strong></li>
-                    <li>Surveillance d’un échange <strong>avocat/client</strong></li>
-                    <li><strong>Amendement sans avocat</strong> si demandé</li>
-                    <li><strong>Enfermement abusif</strong> avocat/client</li>
-                    <li><strong>Non-respect du délai</strong> pour les droits du M.E.C</li>
-                </ul>
-
-                <h4>8. Exemple complet de procédure RP</h4>
-                <ol>
-                    <li><strong>Interpellation</strong>: « Police, vous êtes interpellé pour suspicion de vol. »</li>
-                    <li><strong>Transport PDP</strong></li>
-                    <li><strong>Lecture Miranda</strong></li>
-                    <li><strong>Question droits</strong></li>
-                    <li><strong>Fouille</strong></li>
-                    <li><strong>Appel avocat</strong> si demandé</li>
-                    <li><strong>Amende</strong></li>
-                    <li><strong>Cellule</strong>: arrest stick</li>
-                </ol>
-
-                <h4>9. Amendes et incarcération</h4>
-                <p>Le suspect doit payer ses amendes :</p>
-                <ul>
-                    <li>✅ <strong>Paiement</strong> → réduction de <strong>30% de prison</strong></li>
-                    <li>❌ <strong>Refus</strong> → temps de <strong>prison maximal</strong></li>
-                </ul>
-                <p>Une fois les amendes traitées :</p>
-                <ul>
-                    <li>Incarcération en cellule</li>
-                    <li>Utilisation de l’<strong>arrest stick</strong></li>
-                </ul>
-                <hr>
-                <p class="lead"><strong>Rappel Final</strong>: Le respect strict de ce guide garantit une justice cohérente et équitable. Tout manquement pourra entraîner des <strong>sanctions (en rp) ou administratives</strong>.</p>
+        <!-- Vue focus (partagée pour toutes les sections) -->
+        <div id="procedureFocusView" class="d-none h-100 flex-column">
+          <div class="row mb-3 align-items-center">
+            <div class="col-auto me-auto">
+              <button id="backToGridBtn" class="btn btn-outline-light"><i class="fa-solid fa-arrow-left"></i> Retour</button>
             </div>
-            <div class="content-section" id="balisage">
-                <h2 class="mt-3">Balisage et Sécurité</h2>
-                <p>Le balisage et la mise en place de périmètres de sécurité sont des compétences fondamentales pour tout agent du RPD. Elles garantissent la protection des civils, la préservation des scènes de crime et le bon déroulement des interventions.</p>
-
-                <h4>Principes Généraux</h4>
-                <ul>
-                    <li><strong>Visibilité :</strong> Le balisage doit être clairement visible de jour comme de nuit. Utilisez des cônes, des rubans et des véhicules de service avec leurs signaux lumineux.</li>
-                    <li><strong>Adaptabilité :</strong> Le périmètre doit être adapté à la nature de l'incident (accident, scène de crime, événement public, etc.) et à l'environnement.</li>
-                    <li><strong>Communication :</strong> Informez clairement les civils et les autres unités de la nature du périmètre et des déviations mises en place.</li>
-                </ul>
-
-                <h4>Types de Périmètres</h4>
-                <ol>
-                    <li><strong>Périmètre d'Intervention :</strong>
-                        <ul>
-                            <li><strong>Objectif :</strong> Isoler une zone pour une intervention en cours (ex: prise d'otage, individu armé).</li>
-                            <li><strong>Mise en place :</strong> Très rapide, souvent avec les véhicules pour bloquer les accès. Le ruban de balisage est déroulé dès que possible.</li>
-                            <li><strong>Accès :</strong> Strictement réservé aux unités d'intervention.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Périmètre de Scène de Crime (Périmètre Judiciaire) :</strong>
-                        <ul>
-                            <li><strong>Objectif :</strong> Geler une scène pour préserver les preuves et indices.</li>
-                            <li><strong>Mise en place :</strong> Le plus large possible au départ, puis réduit après analyse par les enquêteurs. Il doit inclure tous les points d'entrée/sortie possibles et les zones où des preuves pourraient avoir été jetées.</li>
-                            <li><strong>Accès :</strong> Un seul point d'entrée et de sortie contrôlé. Seul le personnel autorisé (enquêteurs, techniciens de scène de crime) peut y pénétrer. Un registre des entrées/sorties est obligatoire.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Périmètre de Sécurité Publique :</strong>
-                        <ul>
-                            <li><strong>Objectif :</strong> Protéger le public d'un danger (ex: colis suspect, accident de la route, incendie).</li>
-                            <li><strong>Mise en place :</strong> Doit être suffisamment grand pour mettre les civils hors de portée du danger potentiel. Des déviations claires doivent être établies.</li>
-                            <li><strong>Accès :</strong> Interdit à toute personne non autorisée. Les agents en périphérie informent et orientent le public.</li>
-                        </ul>
-                    </li>
-                </ol>
+            <div class="col-auto">
+              <div class="btn-group" role="group">
+                <button type="button" id="prevProcedureBtn" class="btn focus-nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button type="button" id="nextProcedureBtn" class="btn focus-nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
             </div>
+          </div>
+          <div id="procedureFocusContent" class="flex-grow-1"></div>
         </div>
+      </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Welcome Modal -->
-<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="welcomeModalLabel"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shield-check me-2" viewBox="0 0 16 16">
-  <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.61.61 0 0 0 .1-.025c.076-.023.174-.06.294-.118.24-.113.545-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.953-.324-1.89-.623-2.837-.856C9.822 1.272 8.932 1 8 1s-1.822.272-2.662.59zM10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-</svg>Bienvenue sur le portail du RPD !</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Toutes les informations et procédures du Vlife Police Department sont organisées dans le menu latéral.</p>
-        <p class="mb-0">Cliquez sur l'icône <strong class="menu-icon-highlight">☰</strong> en haut à gauche pour ouvrir le menu et naviguer entre les sections.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Compris !</button>
-      </div>
-    </div>
-  </div>
-</div>
-    <!-- Image Modal -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModalLabel">Code Radio</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <img src="media/code_radio/coderadio.png" class="img-fluid" alt="Codes radio de la police">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Armes Modal -->
-<div class="modal fade" id="armesModal" tabindex="-1" aria-labelledby="armesModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="armesModalLabel">Armes</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <img src="media/uniforme_et_armes/arme_rpd.png" class="img-fluid" alt="Armes RPD">
-      </div>
-    </div>
-  </div>
-</div>
-
-    <footer class="footer bg-dark text-white text-center py-3 mt-5">
-        <div class="container">
-            <p>&copy; 2025 Vlife | Rockford Police Department. Félix Scott (partie la plus importante du règlement) et Mafouf Honorable (site + légère modification du règlement).</p>
-        </div>
-    </footer>
-    <script>
-        const themeSwitch = document.getElementById('checkbox');
-        const body = document.body;
-
-        // Check localStorage for theme preference
-        let currentTheme = localStorage.getItem('theme');
-
-        if (currentTheme) {
-            // If a theme is saved, apply it
-            body.classList.add(currentTheme);
-            if (currentTheme === 'dark-mode') {
-                themeSwitch.checked = true;
-            }
-        } else {
-            // If no theme is saved (first visit), default to dark mode
-            body.classList.add('dark-mode');
-            themeSwitch.checked = true;
-            localStorage.setItem('theme', 'dark-mode'); // Save dark mode as default for future visits
-        }
-
-        themeSwitch.addEventListener('change', function() {
-            if(this.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark-mode');
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('theme', ''); // Remove dark mode preference
-            }
-        });
-
-        // Set current date and time for Miranda rights
-        const datetimeSpan = document.getElementById('current-datetime');
-        if (datetimeSpan) {
-            function updateTime() {
-                const now = new Date();
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-                datetimeSpan.textContent = now.toLocaleDateString('fr-FR', options);
-            }
-            updateTime();
-            setInterval(updateTime, 1000);
-        }
-
-        // Welcome Modal
-        const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
-        if (!localStorage.getItem('visited')) {
-            welcomeModal.show();
-            localStorage.setItem('visited', 'true');
-        }
-
-        // Image Modal close on click outside
-        const imageModal = document.getElementById('imageModal');
-        imageModal.addEventListener('click', function (event) {
-            const modalImage = imageModal.querySelector('img');
-            const modalHeader = imageModal.querySelector('.modal-header');
-
-            // If the click is not on the image and not inside the header
-            if (event.target !== modalImage && !modalHeader.contains(event.target)) {
-                const modal = bootstrap.Modal.getInstance(imageModal);
-                modal.hide();
-            }
-        });
-
-        const armesModal = document.getElementById('armesModal');
-        armesModal.addEventListener('click', function (event) {
-            const modalImage = armesModal.querySelector('img');
-            const modalHeader = armesModal.querySelector('.modal-header');
-
-            // If the click is not on the image and not inside the header
-            if (event.target !== modalImage && !modalHeader.contains(event.target)) {
-                const modal = bootstrap.Modal.getInstance(armesModal);
-                modal.hide();
-            }
-        });
-
-        // Radio call customization
-        const radioGradeInput = document.getElementById('radio-grade');
-        const radioNomInput = document.getElementById('radio-nom');
-        const radioUniteInput = document.getElementById('radio-unite');
-
-        const radioGradeSpans = document.querySelectorAll('.radio-grade');
-        const radioNomSpans = document.querySelectorAll('.radio-nom');
-        const radioUniteSpans = document.querySelectorAll('.radio-unite');
-
-        // Load saved values from localStorage
-        if (localStorage.getItem('radio-grade')) {
-            radioGradeInput.value = localStorage.getItem('radio-grade');
-        }
-        if (localStorage.getItem('radio-nom')) {
-            radioNomInput.value = localStorage.getItem('radio-nom');
-        }
-        if (localStorage.getItem('radio-unite')) {
-            radioUniteInput.value = localStorage.getItem('radio-unite');
-        }
-
-        function updateRadioCalls() {
-            const grade = radioGradeInput.value;
-            const nom = radioNomInput.value;
-            const unite = radioUniteInput.value;
-
-            radioGradeSpans.forEach(span => span.textContent = grade);
-            radioNomSpans.forEach(span => span.textContent = nom);
-            radioUniteSpans.forEach(span => span.textContent = unite);
-
-            // Save values to localStorage
-            localStorage.setItem('radio-grade', grade);
-            localStorage.setItem('radio-nom', nom);
-            localStorage.setItem('radio-unite', unite);
-        }
-
-        // Initial update to display saved values
-        updateRadioCalls();
-
-        radioGradeInput.addEventListener('input', updateRadioCalls);
-        radioNomInput.addEventListener('input', updateRadioCalls);
-        radioUniteInput.addEventListener('input', updateRadioCalls);
-
-        // Pyramid hover script
-        const pyramidLevels = document.querySelectorAll('.pyramid-level');
-        pyramidLevels.forEach(level => {
-            const details = level.querySelector('.grade-details');
-            if (details) {
-                level.addEventListener('mouseenter', () => {
-                    details.style.opacity = '1';
-                    details.style.visibility = 'visible';
-                });
-                level.addEventListener('mouseleave', () => {
-                    details.style.opacity = '0';
-                    details.style.visibility = 'hidden';
-                });
-                level.addEventListener('mousemove', e => {
-                    details.style.left = `${e.clientX + 15}px`;
-                    details.style.top = `${e.clientY + 15}px`;
-                });
-            }
-        });
-
-        // Function to activate a section and update menu items
-        function activateSection(targetId) {
-            const contentSections = document.querySelectorAll('.content-section');
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            // Hide all content sections
-            contentSections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Show the target content section
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.classList.add('active');
-            }
-
-            // Update active menu item
-            menuItems.forEach(menuItem => {
-                menuItem.classList.remove('active');
-                if (menuItem.getAttribute('data-target') === targetId) {
-                    menuItem.classList.add('active');
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.getElementById('menu-toggle');
-            const submenuToggles = document.querySelectorAll('.submenu-toggle');
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            menuToggle.addEventListener('click', function() {
-                document.body.classList.toggle('menu-open');
-            });
-
-            submenuToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    this.parentElement.classList.toggle('open');
-                });
-            });
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('data-target');
-
-                    if(targetId){
-                        e.preventDefault();
-                        // If the item is not a submenu toggle, handle content switching
-                        if (!this.classList.contains('submenu-toggle')) {
-                            activateSection(targetId);
-                            
-                            // Close the menu on item click (optional, good for mobile)
-                            if (window.innerWidth <= 768) {
-                                document.body.classList.remove('menu-open');
-                            }
-                        }
-                    }
-                });
-            });
-
-            // Initial section activation based on URL hash or default
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                // Try to activate section based on hash
-                const targetSection = document.getElementById(hash);
-                if (targetSection) {
-                    activateSection(hash);
-                } else {
-                    // If hash exists but doesn't match a section, fall back to default
-                    activateSection('reglement'); // Default to "Règlement RPD"
-                }
-            } else {
-                // No hash, activate default section
-                activateSection('reglement'); // Default to "Règlement RPD"
-            }
-        });
-    </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
